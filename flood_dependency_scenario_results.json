@@ -1,0 +1,256 @@
+[
+  {
+    "scenario": "Scenario 1: Andheri Subway",
+    "result": {
+      "dependency_type": "RAINFALL_TO_WATER_RISE",
+      "cause_asset_id": "AST-00027",
+      "effect_asset_id": "AST-00026",
+      "status": "POSSIBLE_DEPENDENCY",
+      "confidence_score": 0.855,
+      "severity_level": "CRITICAL",
+      "rule_id": "RULE_RAINFALL_TO_WATER_RISE",
+      "explanation": "Heavy localized precipitation (58.0mm/hr) propagated into +11.2cm water level rise within 25.0 min (DIRECT_EDGE:UPSTREAM_OF:VERIFIED).",
+      "is_causation_proven": false,
+      "supporting_evidence": [
+        {
+          "source_id": "AST-00027",
+          "source_type": "SENSOR",
+          "timestamp": "2026-07-15T14:00:00+05:30",
+          "is_supporting": true,
+          "summary": "Rainfall intensity 16.5mm/15m (58.0mm/1h) exceeds heavy rain threshold.",
+          "data_quality": "VALID",
+          "confidence_weight": 1.0
+        },
+        {
+          "source_id": "AST-00026",
+          "source_type": "SENSOR",
+          "timestamp": "2026-07-15T14:25:00+05:30",
+          "is_supporting": true,
+          "summary": "Water level reached 58.5cm with rise rate of +11.2cm.",
+          "data_quality": "VALID",
+          "confidence_weight": 1.0
+        }
+      ],
+      "contradictory_evidence": [],
+      "missing_evidence": [],
+      "alternative_hypotheses": [
+        "Upstream catchment discharge",
+        "Drain culvert capacity bottleneck"
+      ],
+      "temporal_delay_minutes": 25.0,
+      "edge_attributes": {
+        "relationship_type": "POSSIBLE_DEPENDENCY",
+        "confidence": 0.855
+      }
+    }
+  },
+  {
+    "scenario": "Scenario 1: Andheri Subway",
+    "result": {
+      "dependency_type": "WATER_LEVEL_TO_ROAD_WATERLOGGING",
+      "cause_asset_id": "AST-00026",
+      "effect_asset_id": "AST-00028",
+      "status": "POSSIBLE_DEPENDENCY",
+      "confidence_score": 0.828,
+      "severity_level": "CRITICAL",
+      "rule_id": "RULE_WATER_LEVEL_TO_ROAD_WATERLOGGING",
+      "explanation": "Subsurface drain surcharge (58.5cm) backed up onto surface carriage-way, producing 52.0cm waterlogging (DIRECT_EDGE:SERVES_ROAD:VERIFIED).",
+      "is_causation_proven": false,
+      "supporting_evidence": [
+        {
+          "source_id": "AST-00026",
+          "source_type": "SENSOR",
+          "timestamp": "2026-07-15T14:25:00+05:30",
+          "is_supporting": true,
+          "summary": "Culvert water level reached 58.5cm exceeding surcharge threshold.",
+          "data_quality": "VALID",
+          "confidence_weight": 1.0
+        },
+        {
+          "source_id": "AST-00028",
+          "source_type": "OBSERVATION",
+          "timestamp": "2026-07-15T14:30:00+05:30",
+          "is_supporting": true,
+          "summary": "Road waterlogging reported with surface water depth of 52.0cm.",
+          "data_quality": "VALID",
+          "confidence_weight": 1.0
+        }
+      ],
+      "contradictory_evidence": [],
+      "missing_evidence": [],
+      "alternative_hypotheses": [],
+      "temporal_delay_minutes": 5.0,
+      "edge_attributes": {
+        "relationship_type": "POSSIBLE_DEPENDENCY",
+        "confidence": 0.828
+      }
+    }
+  },
+  {
+    "scenario": "Scenario 1: Andheri Subway",
+    "result": {
+      "dependency_type": "ROAD_WATERLOGGING_TO_TRAFFIC_SLOWDOWN",
+      "cause_asset_id": "AST-00028",
+      "effect_asset_id": "ROUTE-ANDHERI-SUBWAY",
+      "status": "POSSIBLE_DEPENDENCY",
+      "confidence_score": 0.883,
+      "severity_level": "CRITICAL",
+      "rule_id": "RULE_ROAD_WATERLOGGING_TO_TRAFFIC_SLOWDOWN",
+      "explanation": "Carriageway inundation (CLOSED) caused severe traffic friction: speed dropped 85.0% (+45.0 min bottleneck delay).",
+      "is_causation_proven": false,
+      "supporting_evidence": [
+        {
+          "source_id": "AST-00028",
+          "source_type": "OBSERVATION",
+          "timestamp": "2026-07-15T14:30:00+05:30",
+          "is_supporting": true,
+          "summary": "Road passability reported as CLOSED.",
+          "data_quality": "VALID",
+          "confidence_weight": 1.0
+        },
+        {
+          "source_id": "ROUTE-ANDHERI-SUBWAY",
+          "source_type": "SENSOR",
+          "timestamp": "2026-07-15T14:35:00+05:30",
+          "is_supporting": true,
+          "summary": "Traffic speed dropped by 85.0%, adding +45.0 min delay.",
+          "data_quality": "VALID",
+          "confidence_weight": 1.0
+        }
+      ],
+      "contradictory_evidence": [],
+      "missing_evidence": [],
+      "alternative_hypotheses": [],
+      "temporal_delay_minutes": 5.0,
+      "edge_attributes": {
+        "relationship_type": "IMPACTS_ROUTE",
+        "confidence": 0.883
+      }
+    }
+  },
+  {
+    "scenario": "Scenario 2: Invariant 4 Safeguard",
+    "result": {
+      "dependency_type": "DRAIN_BLOCKAGE_TO_ACCUMULATION",
+      "cause_asset_id": "AST-00024",
+      "effect_asset_id": "AST-00026",
+      "status": "UNCERTAIN_INVESTIGATING",
+      "confidence_score": 0.2,
+      "severity_level": "MODERATE",
+      "rule_id": "RULE_DRAIN_BLOCKAGE_TO_ACCUMULATION",
+      "explanation": "INVARIANT ENFORCED: High water level alone is insufficient to infer a drain blockage. No explicit blockage sensor telemetry or inspection record present.",
+      "is_causation_proven": false,
+      "supporting_evidence": [],
+      "contradictory_evidence": [],
+      "missing_evidence": [
+        "Physical drain inspection record",
+        "Acoustic / ultrasonic pipe blockage telemetry"
+      ],
+      "alternative_hypotheses": [
+        "Rainfall volume simply exceeded nominal hydraulic design capacity.",
+        "Pump station clearance rate is below inflow rate.",
+        "High downstream tidal head preventing gravity discharge."
+      ],
+      "temporal_delay_minutes": null,
+      "edge_attributes": {}
+    }
+  },
+  {
+    "scenario": "Scenario 3a: Unrelated Power Feeder",
+    "result": {
+      "dependency_type": "POWER_FAILURE_TO_PUMP_FAILURE",
+      "cause_asset_id": "AST-00025",
+      "effect_asset_id": "AST-00006",
+      "status": "REFUTED_CONTRADICTED",
+      "confidence_score": 0.1,
+      "severity_level": "LOW",
+      "rule_id": "RULE_POWER_FAILURE_TO_PUMP_FAILURE",
+      "explanation": "INVARIANT ENFORCED: No verified electric supply dependency between power feeder AST-00025 and pump station AST-00006. Unrelated power outages cannot be inferred as pump failure causes.",
+      "is_causation_proven": false,
+      "supporting_evidence": [],
+      "contradictory_evidence": [],
+      "missing_evidence": [
+        "Verified electrical single-line diagram linking AST-00025 to AST-00006"
+      ],
+      "alternative_hypotheses": [
+        "Mechanical pump impeller jamming (debris/silt)",
+        "Thermal motor trip due to continuous high-load running",
+        "Auxiliary diesel generator failure (independent of utility grid)"
+      ],
+      "temporal_delay_minutes": null,
+      "edge_attributes": {}
+    }
+  },
+  {
+    "scenario": "Scenario 3b: Verified Power Circuit",
+    "result": {
+      "dependency_type": "POWER_FAILURE_TO_PUMP_FAILURE",
+      "cause_asset_id": "AST-00004",
+      "effect_asset_id": "AST-00006",
+      "status": "CONFIRMED_DEPENDENCY",
+      "confidence_score": 0.92,
+      "severity_level": "HIGH",
+      "rule_id": "RULE_POWER_FAILURE_TO_PUMP_FAILURE",
+      "explanation": "Power feeder AST-00004 outage preceded pump station AST-00006 stoppage by 10.0 min on verified power circuit (VERIFIED).",
+      "is_causation_proven": false,
+      "supporting_evidence": [
+        {
+          "source_id": "AST-00004",
+          "source_type": "ASSET",
+          "timestamp": "2026-07-15T16:00:00+05:30",
+          "is_supporting": true,
+          "summary": "Power feeder AST-00004 experienced blackout (status: OFFLINE).",
+          "data_quality": "VALID",
+          "confidence_weight": 1.0
+        },
+        {
+          "source_id": "AST-00006",
+          "source_type": "ASSET",
+          "timestamp": "2026-07-15T16:10:00+05:30",
+          "is_supporting": true,
+          "summary": "Pump station AST-00006 de-energized 10.0 min later.",
+          "data_quality": "VALID",
+          "confidence_weight": 1.0
+        }
+      ],
+      "contradictory_evidence": [],
+      "missing_evidence": [],
+      "alternative_hypotheses": [],
+      "temporal_delay_minutes": 10.0,
+      "edge_attributes": {
+        "relationship_type": "POSSIBLE_DEPENDENCY",
+        "confidence": 0.92
+      }
+    }
+  },
+  {
+    "scenario": "Scenario 4: Contradiction Isolation",
+    "result": {
+      "dependency_type": "ROAD_WATERLOGGING_TO_TRAFFIC_SLOWDOWN",
+      "cause_asset_id": "AST-00028",
+      "effect_asset_id": "ROUTE-ANDHERI-SUBWAY",
+      "status": "REFUTED_CONTRADICTED",
+      "confidence_score": 0.2,
+      "severity_level": "MODERATE",
+      "rule_id": "RULE_ROAD_WATERLOGGING_TO_TRAFFIC_SLOWDOWN",
+      "explanation": "Contradiction flagged: Traffic monitoring reports normal free flow speeds.",
+      "is_causation_proven": false,
+      "supporting_evidence": [],
+      "contradictory_evidence": [
+        {
+          "source_id": "ROUTE-ANDHERI-SUBWAY",
+          "source_type": "SENSOR",
+          "timestamp": "2026-07-15T17:10:00+05:30",
+          "is_supporting": false,
+          "summary": "Traffic telemetry shows normal free flow speeds, contradicting complete road closure claim.",
+          "data_quality": "VALID",
+          "confidence_weight": 1.0
+        }
+      ],
+      "missing_evidence": [],
+      "alternative_hypotheses": [],
+      "temporal_delay_minutes": null,
+      "edge_attributes": {}
+    }
+  }
+]

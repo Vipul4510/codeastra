@@ -1,0 +1,399 @@
+[
+  {
+    "case_id": "UNSEEN-01",
+    "title": "Chhatrapati Shivaji Maharaj International Airport (T2 Arrival Ramp)",
+    "unseen_coords": [
+      19.0974,
+      72.8743
+    ],
+    "locality": "Sahar, Andheri East",
+    "nearest_asset": {
+      "distance_km": 2.653,
+      "asset_id": "AST-00380",
+      "asset_type": "RAIN_GAUGE",
+      "asset_name": "Andheri_rain_gauge_0380",
+      "locality": "Andheri",
+      "latitude": 19.11626,
+      "longitude": 72.858839,
+      "catchment_id": null,
+      "design_capacity_lps": null,
+      "elevation_m": 38.47,
+      "asset_status": "MAINTENANCE",
+      "data_source": "SYNTHETIC_ASSET_REGISTER",
+      "is_synthetic": true
+    },
+    "alert_level": "AMBER_WARNING",
+    "urgency": "HIGH",
+    "traffic_impact": {
+      "passability": "RESTRICTED",
+      "speed_drop_pct": 74.0,
+      "delay_minutes": 42.0,
+      "affected_route_id": "AIRPORT-RAMP-01"
+    },
+    "actions": [
+      "Dispatch Municipal Ward field inspection team to Sahar, Andheri East.",
+      "Clear stormwater outfall grates and inspect manhole sumps.",
+      "Broadcast digital message signs (VMS) on corridor: 42.0 min delay near Sahar, Andheri East.",
+      "Activate alternative bypass detour for AIRPORT-RAMP-01 to avoid bottleneck.",
+      "Deploy traffic marshals to intersections feeding (19.0974, 72.8743).",
+      "Inspect priority asset AST-00380 (RAIN_GAUGE) located 2.653km away."
+    ]
+  },
+  {
+    "case_id": "UNSEEN-02",
+    "title": "BKC Diamond Bourse Financial District Junction",
+    "unseen_coords": [
+      19.0657,
+      72.8681
+    ],
+    "locality": "Bandra Kurla Complex",
+    "nearest_asset": {
+      "distance_km": 5.198,
+      "asset_id": "AST-00368",
+      "asset_type": "PUMP_STATION",
+      "asset_name": "Andheri_pump_station_0368",
+      "locality": "Andheri",
+      "latitude": 19.106317,
+      "longitude": 72.843604,
+      "catchment_id": "CAT-007",
+      "design_capacity_lps": 786.6,
+      "elevation_m": 38.45,
+      "asset_status": "UNKNOWN",
+      "data_source": "SIMULATED_SENSOR_MAP",
+      "is_synthetic": true
+    },
+    "alert_level": "RED_CRITICAL",
+    "urgency": "IMMEDIATE",
+    "traffic_impact": {
+      "passability": "CLOSED",
+      "speed_drop_pct": 85.0,
+      "delay_minutes": 60.0,
+      "affected_route_id": "BKC-AVENUE-3"
+    },
+    "actions": [
+      "Deploy mobile de-watering high-capacity pumps to coordinates (19.0657, 72.8681).",
+      "Issue traffic diversion and close underpasses/subways around Bandra Kurla Complex.",
+      "Switch adjacent pumping stations in Bandra Kurla Complex to secondary diesel generation (DG set).",
+      "Broadcast digital message signs (VMS) on corridor: 60.0 min delay near Bandra Kurla Complex.",
+      "Activate alternative bypass detour for BKC-AVENUE-3 to avoid bottleneck.",
+      "Deploy traffic marshals to intersections feeding (19.0657, 72.8681).",
+      "Inspect priority asset AST-00368 (PUMP_STATION) located 5.198km away."
+    ]
+  },
+  {
+    "case_id": "UNSEEN-03",
+    "title": "Juhu Beach Flying Club Low-Lying Coastal Corridor",
+    "unseen_coords": [
+      19.0991,
+      72.8298
+    ],
+    "locality": "Juhu Tara Road",
+    "nearest_asset": {
+      "distance_km": 1.514,
+      "asset_id": "AST-00024",
+      "asset_type": "DRAIN",
+      "asset_name": "Andheri_drain_0024",
+      "locality": "Andheri",
+      "latitude": 19.110961,
+      "longitude": 72.836869,
+      "catchment_id": "CAT-061",
+      "design_capacity_lps": 345.83,
+      "elevation_m": 43.75,
+      "asset_status": "MAINTENANCE",
+      "data_source": "SYNTHETIC_ASSET_REGISTER",
+      "is_synthetic": true
+    },
+    "alert_level": "AMBER_WARNING",
+    "urgency": "HIGH",
+    "traffic_impact": {
+      "passability": "RESTRICTED",
+      "speed_drop_pct": 58.0,
+      "delay_minutes": 28.0,
+      "affected_route_id": "JUHU-COASTAL-RD"
+    },
+    "actions": [
+      "Dispatch Municipal Ward field inspection team to Juhu Tara Road.",
+      "Clear stormwater outfall grates and inspect manhole sumps.",
+      "Broadcast digital message signs (VMS) on corridor: 28.0 min delay near Juhu Tara Road.",
+      "Activate alternative bypass detour for JUHU-COASTAL-RD to avoid bottleneck.",
+      "Deploy traffic marshals to intersections feeding (19.0991, 72.8298).",
+      "Inspect priority asset AST-00024 (DRAIN) located 1.514km away."
+    ]
+  },
+  {
+    "case_id": "UNSEEN-04",
+    "title": "Lokhandwala Complex Creek Bridge",
+    "unseen_coords": [
+      19.1438,
+      72.8252
+    ],
+    "locality": "Lokhandwala, Andheri West",
+    "nearest_asset": {
+      "distance_km": 0.472,
+      "asset_id": "AST-00338",
+      "asset_type": "SUBWAY_UNDERPASS",
+      "asset_name": "Versova_subway_underpass_0338",
+      "locality": "Versova",
+      "latitude": 19.14083,
+      "longitude": 72.821984,
+      "catchment_id": "CAT-048",
+      "design_capacity_lps": null,
+      "elevation_m": 3.63,
+      "asset_status": "MAINTENANCE",
+      "data_source": "SYNTHETIC_ASSET_REGISTER",
+      "is_synthetic": true
+    },
+    "alert_level": "RED_CRITICAL",
+    "urgency": "IMMEDIATE",
+    "traffic_impact": {
+      "passability": "CLOSED",
+      "speed_drop_pct": 90.0,
+      "delay_minutes": 75.0,
+      "affected_route_id": "LINK-ROAD-NORTH"
+    },
+    "actions": [
+      "Deploy mobile de-watering high-capacity pumps to coordinates (19.1438, 72.8252).",
+      "Issue traffic diversion and close underpasses/subways around Lokhandwala, Andheri West.",
+      "Switch adjacent pumping stations in Lokhandwala, Andheri West to secondary diesel generation (DG set).",
+      "Broadcast digital message signs (VMS) on corridor: 75.0 min delay near Lokhandwala, Andheri West.",
+      "Activate alternative bypass detour for LINK-ROAD-NORTH to avoid bottleneck.",
+      "Deploy traffic marshals to intersections feeding (19.1438, 72.8252).",
+      "Inspect priority asset AST-00338 (SUBWAY_UNDERPASS) located 0.472km away."
+    ]
+  },
+  {
+    "case_id": "UNSEEN-05",
+    "title": "Aarey Colony Forest Arterial Link Road",
+    "unseen_coords": [
+      19.1506,
+      72.8752
+    ],
+    "locality": "Aarey Milk Colony, Goregaon",
+    "nearest_asset": {
+      "distance_km": 1.764,
+      "asset_id": "AST-00481",
+      "asset_type": "PUMP_STATION",
+      "asset_name": "Jogeshwari_pump_station_0481",
+      "locality": "Jogeshwari",
+      "latitude": 19.142224,
+      "longitude": 72.860944,
+      "catchment_id": "CAT-046",
+      "design_capacity_lps": 1025.35,
+      "elevation_m": 44.53,
+      "asset_status": "ACTIVE",
+      "data_source": "SYNTHETIC_ASSET_REGISTER",
+      "is_synthetic": true
+    },
+    "alert_level": "RED_CRITICAL",
+    "urgency": "IMMEDIATE",
+    "traffic_impact": {
+      "passability": "CLOSED",
+      "speed_drop_pct": 100.0,
+      "delay_minutes": 90.0,
+      "affected_route_id": "AAREY-INTERNAL-RD"
+    },
+    "actions": [
+      "Deploy mobile de-watering high-capacity pumps to coordinates (19.1506, 72.8752).",
+      "Issue traffic diversion and close underpasses/subways around Aarey Milk Colony, Goregaon.",
+      "Broadcast digital message signs (VMS) on corridor: 90.0 min delay near Aarey Milk Colony, Goregaon.",
+      "Activate alternative bypass detour for AAREY-INTERNAL-RD to avoid bottleneck.",
+      "Deploy traffic marshals to intersections feeding (19.1506, 72.8752).",
+      "Inspect priority asset AST-00481 (PUMP_STATION) located 1.764km away."
+    ]
+  },
+  {
+    "case_id": "UNSEEN-06",
+    "title": "Bandra Bandstand Coastal Promenade Foot",
+    "unseen_coords": [
+      19.0435,
+      72.8196
+    ],
+    "locality": "Bandra West Promenade",
+    "nearest_asset": {
+      "distance_km": 7.426,
+      "asset_id": "AST-00368",
+      "asset_type": "PUMP_STATION",
+      "asset_name": "Andheri_pump_station_0368",
+      "locality": "Andheri",
+      "latitude": 19.106317,
+      "longitude": 72.843604,
+      "catchment_id": "CAT-007",
+      "design_capacity_lps": 786.6,
+      "elevation_m": 38.45,
+      "asset_status": "UNKNOWN",
+      "data_source": "SIMULATED_SENSOR_MAP",
+      "is_synthetic": true
+    },
+    "alert_level": "GREEN_NORMAL",
+    "urgency": "LOW",
+    "traffic_impact": {
+      "passability": "PASSABLE",
+      "speed_drop_pct": 0.0,
+      "delay_minutes": 0.0,
+      "affected_route_id": "BJ-ROAD"
+    },
+    "actions": [
+      "Inspect priority asset AST-00368 (PUMP_STATION) located 7.426km away."
+    ]
+  },
+  {
+    "case_id": "UNSEEN-07",
+    "title": "Marol Naka Andheri-Kurla Road Metro Underpass",
+    "unseen_coords": [
+      19.1098,
+      72.8798
+    ],
+    "locality": "Marol Naka",
+    "nearest_asset": {
+      "distance_km": 2.316,
+      "asset_id": "AST-00380",
+      "asset_type": "RAIN_GAUGE",
+      "asset_name": "Andheri_rain_gauge_0380",
+      "locality": "Andheri",
+      "latitude": 19.11626,
+      "longitude": 72.858839,
+      "catchment_id": null,
+      "design_capacity_lps": null,
+      "elevation_m": 38.47,
+      "asset_status": "MAINTENANCE",
+      "data_source": "SYNTHETIC_ASSET_REGISTER",
+      "is_synthetic": true
+    },
+    "alert_level": "AMBER_WARNING",
+    "urgency": "HIGH",
+    "traffic_impact": {
+      "passability": "RESTRICTED",
+      "speed_drop_pct": 66.0,
+      "delay_minutes": 35.0,
+      "affected_route_id": "ANDHERI-KURLA-RD"
+    },
+    "actions": [
+      "Dispatch Municipal Ward field inspection team to Marol Naka.",
+      "Clear stormwater outfall grates and inspect manhole sumps.",
+      "Broadcast digital message signs (VMS) on corridor: 35.0 min delay near Marol Naka.",
+      "Activate alternative bypass detour for ANDHERI-KURLA-RD to avoid bottleneck.",
+      "Deploy traffic marshals to intersections feeding (19.1098, 72.8798).",
+      "Inspect priority asset AST-00380 (RAIN_GAUGE) located 2.316km away."
+    ]
+  },
+  {
+    "case_id": "UNSEEN-08",
+    "title": "Versova Fishing Village Jetty",
+    "unseen_coords": [
+      19.1352,
+      72.8094
+    ],
+    "locality": "Versova Village",
+    "nearest_asset": {
+      "distance_km": 0.222,
+      "asset_id": "AST-00655",
+      "asset_type": "RAIN_GAUGE",
+      "asset_name": "Versova_rain_gauge_0655",
+      "locality": "Versova",
+      "latitude": 19.133245,
+      "longitude": 72.80981,
+      "catchment_id": null,
+      "design_capacity_lps": null,
+      "elevation_m": 43.26,
+      "asset_status": "UNKNOWN",
+      "data_source": "SIMULATED_SENSOR_MAP",
+      "is_synthetic": true
+    },
+    "alert_level": "RED_CRITICAL",
+    "urgency": "IMMEDIATE",
+    "traffic_impact": {
+      "passability": "CLOSED",
+      "speed_drop_pct": 80.0,
+      "delay_minutes": 40.0,
+      "affected_route_id": "JETTY-ACCESS-WAY"
+    },
+    "actions": [
+      "Deploy mobile de-watering high-capacity pumps to coordinates (19.1352, 72.8094).",
+      "Issue traffic diversion and close underpasses/subways around Versova Village.",
+      "Broadcast digital message signs (VMS) on corridor: 40.0 min delay near Versova Village.",
+      "Activate alternative bypass detour for JETTY-ACCESS-WAY to avoid bottleneck.",
+      "Deploy traffic marshals to intersections feeding (19.1352, 72.8094).",
+      "Inspect priority asset AST-00655 (RAIN_GAUGE) located 0.222km away."
+    ]
+  },
+  {
+    "case_id": "UNSEEN-09",
+    "title": "Sanjay Gandhi National Park Gate Arterial Approach",
+    "unseen_coords": [
+      19.2289,
+      72.8624
+    ],
+    "locality": "Borivali East SGNP Gate",
+    "nearest_asset": {
+      "distance_km": 0.101,
+      "asset_id": "AST-01114",
+      "asset_type": "WATER_LEVEL_SENSOR",
+      "asset_name": "Borivali_water_level_sensor_1114",
+      "locality": "Borivali",
+      "latitude": 19.229629,
+      "longitude": 72.861829,
+      "catchment_id": "CAT-031",
+      "design_capacity_lps": null,
+      "elevation_m": 2.03,
+      "asset_status": "ACTIVE",
+      "data_source": "SYNTHETIC_ASSET_REGISTER",
+      "is_synthetic": true
+    },
+    "alert_level": "AMBER_WARNING",
+    "urgency": "HIGH",
+    "traffic_impact": {
+      "passability": "RESTRICTED",
+      "speed_drop_pct": 50.0,
+      "delay_minutes": 20.0,
+      "affected_route_id": "SGNP-ACCESS-RD"
+    },
+    "actions": [
+      "Dispatch Municipal Ward field inspection team to Borivali East SGNP Gate.",
+      "Clear stormwater outfall grates and inspect manhole sumps.",
+      "Broadcast digital message signs (VMS) on corridor: 20.0 min delay near Borivali East SGNP Gate.",
+      "Activate alternative bypass detour for SGNP-ACCESS-RD to avoid bottleneck.",
+      "Deploy traffic marshals to intersections feeding (19.2289, 72.8624).",
+      "Inspect priority asset AST-01114 (WATER_LEVEL_SENSOR) located 0.101km away."
+    ]
+  },
+  {
+    "case_id": "UNSEEN-10",
+    "title": "Mahim Causeway Inter-City Connector Foot",
+    "unseen_coords": [
+      19.0412,
+      72.8421
+    ],
+    "locality": "Mahim Causeway, Bandra South",
+    "nearest_asset": {
+      "distance_km": 7.242,
+      "asset_id": "AST-00368",
+      "asset_type": "PUMP_STATION",
+      "asset_name": "Andheri_pump_station_0368",
+      "locality": "Andheri",
+      "latitude": 19.106317,
+      "longitude": 72.843604,
+      "catchment_id": "CAT-007",
+      "design_capacity_lps": 786.6,
+      "elevation_m": 38.45,
+      "asset_status": "UNKNOWN",
+      "data_source": "SIMULATED_SENSOR_MAP",
+      "is_synthetic": true
+    },
+    "alert_level": "AMBER_WARNING",
+    "urgency": "HIGH",
+    "traffic_impact": {
+      "passability": "RESTRICTED",
+      "speed_drop_pct": 48.0,
+      "delay_minutes": 26.0,
+      "affected_route_id": "MAHIM-CAUSEWAY"
+    },
+    "actions": [
+      "Dispatch Municipal Ward field inspection team to Mahim Causeway, Bandra South.",
+      "Clear stormwater outfall grates and inspect manhole sumps.",
+      "Broadcast digital message signs (VMS) on corridor: 26.0 min delay near Mahim Causeway, Bandra South.",
+      "Activate alternative bypass detour for MAHIM-CAUSEWAY to avoid bottleneck.",
+      "Deploy traffic marshals to intersections feeding (19.0412, 72.8421).",
+      "Inspect priority asset AST-00368 (PUMP_STATION) located 7.242km away."
+    ]
+  }
+]

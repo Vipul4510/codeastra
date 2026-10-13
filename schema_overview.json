@@ -1,0 +1,237 @@
+{
+  "dataset_name": "UrbanPulse Expanded Multimodal Incident Dataset",
+  "provenance": "SYNTHETIC_GENERATED",
+  "primary_observations_rows": 25000,
+  "total_csv_rows": 120940,
+  "files": {
+    "observations.csv": {
+      "rows": 25000,
+      "columns": [
+        "observation_id",
+        "source_id",
+        "source_type",
+        "event_time",
+        "ingested_at",
+        "event_type",
+        "text_original",
+        "text_normalized",
+        "latitude",
+        "longitude",
+        "location_text",
+        "location_accuracy_m",
+        "source_reliability_score",
+        "verification_status",
+        "is_duplicate_candidate",
+        "is_simulated",
+        "provenance",
+        "candidate_incident_id"
+      ]
+    },
+    "incident_clusters.csv": {
+      "rows": 4200,
+      "columns": [
+        "incident_id",
+        "incident_type",
+        "locality",
+        "latitude",
+        "longitude",
+        "first_seen",
+        "last_seen",
+        "severity",
+        "cluster_status",
+        "is_synthetic",
+        "provenance"
+      ]
+    },
+    "observation_incident_links.csv": {
+      "rows": 21000,
+      "columns": [
+        "observation_id",
+        "incident_id",
+        "membership_score",
+        "decision_type",
+        "is_ground_truth",
+        "provenance"
+      ]
+    },
+    "infrastructure_assets.csv": {
+      "rows": 1200,
+      "columns": [
+        "asset_id",
+        "asset_type",
+        "asset_name",
+        "locality",
+        "latitude",
+        "longitude",
+        "catchment_id",
+        "design_capacity_lps",
+        "elevation_m",
+        "asset_status",
+        "data_source",
+        "is_synthetic"
+      ]
+    },
+    "asset_dependencies.csv": {
+      "rows": 2500,
+      "columns": [
+        "dependency_id",
+        "from_asset_id",
+        "to_asset_id",
+        "relationship_type",
+        "relationship_status",
+        "evidence_id",
+        "confidence_score",
+        "provenance"
+      ]
+    },
+    "sensor_readings.csv": {
+      "rows": 15000,
+      "columns": [
+        "reading_id",
+        "sensor_id",
+        "timestamp",
+        "latitude",
+        "longitude",
+        "rainfall_15min_mm",
+        "rainfall_1hr_mm",
+        "water_level_cm",
+        "water_level_change_cm",
+        "flow_rate_lps",
+        "drainage_capacity_pct",
+        "blockage_probability",
+        "pump_status",
+        "sensor_health",
+        "data_quality",
+        "is_synthetic",
+        "provenance"
+      ]
+    },
+    "social_media_posts.csv": {
+      "rows": 6000,
+      "columns": [
+        "post_id",
+        "platform",
+        "platform_post_id",
+        "post_time",
+        "collected_at",
+        "text_original",
+        "language",
+        "latitude",
+        "longitude",
+        "location_text",
+        "permalink",
+        "collection_method",
+        "collection_status",
+        "is_synthetic",
+        "provenance"
+      ]
+    },
+    "social_post_analysis.csv": {
+      "rows": 6000,
+      "columns": [
+        "post_id",
+        "incident_relevance_score",
+        "predicted_event_type",
+        "extracted_location",
+        "event_time_estimate",
+        "duplicate_score",
+        "spam_or_repost_flag",
+        "evidence_quality",
+        "model_version",
+        "review_status",
+        "is_synthetic"
+      ]
+    },
+    "flood_incident_observations.csv": {
+      "rows": 5000,
+      "columns": [
+        "flood_observation_id",
+        "event_type",
+        "observed_time",
+        "reported_time",
+        "locality",
+        "latitude",
+        "longitude",
+        "catchment_id",
+        "asset_id",
+        "water_depth_cm",
+        "affected_length_m",
+        "road_passability",
+        "rainfall_15min_mm",
+        "water_level_cm",
+        "flow_rate_lps",
+        "blockage_status",
+        "verification_status",
+        "measurement_method",
+        "is_synthetic",
+        "provenance"
+      ]
+    },
+    "pairwise_relationship_training.csv": {
+      "rows": 12000,
+      "columns": [
+        "pair_id",
+        "observation_id_a",
+        "observation_id_b",
+        "time_diff_minutes",
+        "geo_distance_km",
+        "text_similarity",
+        "same_locality",
+        "same_source",
+        "reliability_product",
+        "relation_label",
+        "is_synthetic",
+        "provenance"
+      ]
+    },
+    "relationship_evidence_graph_edges.csv": {
+      "rows": 18000,
+      "columns": [
+        "edge_id",
+        "source_entity_type",
+        "source_entity_id",
+        "target_entity_type",
+        "target_entity_id",
+        "relationship_type",
+        "confidence_score",
+        "rule_id",
+        "evidence_ids",
+        "verification_status",
+        "explanation",
+        "is_synthetic"
+      ]
+    },
+    "routes.csv": {
+      "rows": 40,
+      "columns": [
+        "route_id",
+        "origin_name",
+        "origin_lat",
+        "origin_lon",
+        "destination_name",
+        "destination_lat",
+        "destination_lon",
+        "travel_mode",
+        "routing_provider",
+        "geometry_status",
+        "is_synthetic"
+      ]
+    },
+    "route_impacts.csv": {
+      "rows": 5000,
+      "columns": [
+        "route_impact_id",
+        "route_id",
+        "incident_id",
+        "segment_id",
+        "impact_type",
+        "distance_from_route_m",
+        "valid_from",
+        "valid_to",
+        "impact_confidence",
+        "verification_status",
+        "is_synthetic"
+      ]
+    }
+  }
+}

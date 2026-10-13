@@ -1,0 +1,179 @@
+{
+  "scenario_name": "Andheri Subway Monsoon Inundation",
+  "validation_audit": {
+    "is_valid": true,
+    "total_nodes": 12,
+    "total_edges": 13,
+    "node_counts_by_type": {
+      "INCIDENT": 1,
+      "OBSERVATION": 2,
+      "SENSOR": 1,
+      "SOCIAL_POST": 2,
+      "INFRASTRUCTURE_ASSET": 3,
+      "ROUTE": 2,
+      "TRANSIT_SERVICE": 1
+    },
+    "edge_counts_by_type": {
+      "AFFECTS_ASSET": 1,
+      "IMPACTS_ROUTE": 3,
+      "SUPPORTS": 3,
+      "CONTRADICTS": 2,
+      "DUPLICATE_OF": 1,
+      "POSSIBLE_DEPENDENCY": 2,
+      "OBSERVED_BY": 1
+    },
+    "isolated_nodes_count": 0,
+    "isolated_node_ids": [],
+    "active_contradictions_count": 2,
+    "duplicate_edges_count": 0,
+    "validation_issues": []
+  },
+  "query_1_evidence": {
+    "incident_id": "INC-ANDHERI-FLOOD-01",
+    "incident_attributes": {
+      "node_type": "INCIDENT",
+      "label": "Andheri Subway Severe Monsoon Inundation",
+      "locality": "Andheri West",
+      "latitude": 19.1197,
+      "longitude": 72.8464,
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "incident_category": "SUBWAY_INUNDATION",
+      "severity": "CRITICAL",
+      "status": "ACTIVE"
+    },
+    "total_evidence_nodes": 3,
+    "independent_evidence_chains": 3,
+    "mean_evidence_confidence": 0.873,
+    "evidence_items": [
+      {
+        "evidence_id": "OBS-CITIZEN-01",
+        "node_type": "OBSERVATION",
+        "label": "Citizen Eyewitness Report (Andheri Station)",
+        "locality": "Andheri West",
+        "relationship_to_incident": "SUPPORTS",
+        "confidence": 0.88,
+        "explanation": "Eyewitness citizen confirmation of 55cm water depth at subway entrance.",
+        "timestamp": "2026-07-15T14:30:00+05:30",
+        "is_repost_or_duplicate": false
+      },
+      {
+        "evidence_id": "SNS-TELEMETRY-01",
+        "node_type": "SENSOR",
+        "label": "Andheri Water Level Ultrasonic Telemetry",
+        "locality": "Andheri West",
+        "relationship_to_incident": "SUPPORTS",
+        "confidence": 0.96,
+        "explanation": "Hardware water level sensor confirms 58.5cm standing water in underpass.",
+        "timestamp": "2026-07-15T14:30:00+05:30",
+        "is_repost_or_duplicate": false
+      },
+      {
+        "evidence_id": "POST-TWITTER-01",
+        "node_type": "SOCIAL_POST",
+        "label": "Tweet: Viral Flood Alert SV Road",
+        "locality": "Andheri West",
+        "relationship_to_incident": "SUPPORTS",
+        "confidence": 0.78,
+        "explanation": "Social crowd signal confirms traffic paralysis at subway approach.",
+        "timestamp": "2026-07-15T14:30:00+05:30",
+        "is_repost_or_duplicate": false
+      }
+    ]
+  },
+  "query_2_contradictions": {
+    "incident_id": "INC-ANDHERI-FLOOD-01",
+    "has_contradictions": true,
+    "contradiction_count": 1,
+    "conflicts": [
+      {
+        "conflicting_node_a": "OBS-CITIZEN-01",
+        "conflicting_node_b": "OBS-CONFLICT-01",
+        "node_b_type": "OBSERVATION",
+        "node_b_label": "Civic Notice: Subway Passable Claim",
+        "node_b_text": "Andheri subway is completely clear and open for vehicles, normal traffic flow",
+        "conflict_explanation": "Factual conflict: Normal passability claim directly contradicts 55cm submersion reports.",
+        "confidence": 0.85,
+        "timestamp": "2026-07-15T14:35:00+05:30"
+      }
+    ]
+  },
+  "query_3_infrastructure": {
+    "incident_id": "INC-ANDHERI-FLOOD-01",
+    "direct_assets_count": 1,
+    "total_connected_assets": 2,
+    "max_hops_explored": 2,
+    "connected_assets": [
+      {
+        "asset_id": "AST-00026",
+        "asset_type": "SUBWAY_UNDERPASS",
+        "label": "Andheri Subway Underpass Arterial Culvert",
+        "locality": "Andheri West",
+        "hop_distance": 1,
+        "connection_reason": "DIRECT_INCIDENT_IMPACT"
+      },
+      {
+        "asset_id": "AST-00052",
+        "asset_type": "RAIL_STATION",
+        "label": "Andheri Western Railway Suburban Station",
+        "locality": "Andheri West",
+        "hop_distance": 2,
+        "connection_reason": "DEPENDENCY: AST-00026 -> AST-00052 (Subway culvert flooding backs up into railway station pedestrian subway access.)"
+      }
+    ]
+  },
+  "query_4_downstream_impacts": {
+    "incident_id": "INC-ANDHERI-FLOOD-01",
+    "total_impacted_routes": 3,
+    "impacted_corridors": [
+      {
+        "route_id": "ROUTE-ANDHERI-SUBWAY",
+        "node_type": "ROUTE",
+        "label": "Andheri Subway East-West Link",
+        "origin_destination": "Andheri West SV Road -> Andheri East WEH",
+        "impact_type": "TOTAL_CLOSURE",
+        "path_distance_hops": 1,
+        "pathway": "INCIDENT_ORIGIN -> [IMPACTS_ROUTE] -> ROUTE-ANDHERI-SUBWAY",
+        "cumulative_impact_confidence": 0.96,
+        "explanation": "Underpass impassable; traffic police activated physical barriers."
+      },
+      {
+        "route_id": "ROUTE-SV-ROAD",
+        "node_type": "ROUTE",
+        "label": "Swami Vivekananda (SV) Road Arterial",
+        "origin_destination": "Bandra Junction -> Dahisar Checknaka",
+        "impact_type": "SEVERE_CONGESTION",
+        "path_distance_hops": 1,
+        "pathway": "INCIDENT_ORIGIN -> [IMPACTS_ROUTE] -> ROUTE-SV-ROAD",
+        "cumulative_impact_confidence": 0.88,
+        "explanation": "Traffic diversion from subway creates a 2.5km gridlock bottleneck on SV Road."
+      },
+      {
+        "route_id": "TRANSIT-WESTERN-RAILWAY",
+        "node_type": "TRANSIT_SERVICE",
+        "label": "Western Railway Suburban Slow Line Corridor",
+        "origin_destination": "Churchgate -> Dahanu Road",
+        "impact_type": "SPEED_RESTRICTION_DELAY",
+        "path_distance_hops": 1,
+        "pathway": "INCIDENT_ORIGIN -> [IMPACTS_ROUTE] -> TRANSIT-WESTERN-RAILWAY",
+        "cumulative_impact_confidence": 0.74,
+        "explanation": "Track culvert near subway approaches water safety threshold; slow speeds enforced."
+      }
+    ]
+  },
+  "query_5_safe_routing": {
+    "route_found": true,
+    "start": "Bandra_Junction",
+    "destination": "Goregaon_Hub",
+    "avoided_nodes": [
+      "ROUTE-ANDHERI-SUBWAY"
+    ],
+    "path_nodes": [
+      "Bandra_Junction",
+      "WEH_Flyover_South",
+      "ROUTE-WEH-ALTERNATIVE",
+      "Goregaon_Hub"
+    ],
+    "path_hops": 3,
+    "causation_disclaimer": "NOTICE ON CAUSATION: Shortest path indicates spatial topological reachability avoiding blocked nodes. It does NOT assert or establish physical causal chains."
+  }
+}

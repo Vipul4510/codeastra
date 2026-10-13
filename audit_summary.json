@@ -1,0 +1,1203 @@
+{
+  "dataset_dir": "d:\\Chaitrali\\SEM 7\\Urban flow\\CodeAstra\\UrbanPulse_Expanded_Dataset",
+  "file_summary": {
+    "asset_dependencies.csv": {
+      "row_count": 2500,
+      "column_count": 8,
+      "columns": [
+        "dependency_id",
+        "from_asset_id",
+        "to_asset_id",
+        "relationship_type",
+        "relationship_status",
+        "evidence_id",
+        "confidence_score",
+        "provenance"
+      ],
+      "dtypes": {
+        "dependency_id": "object",
+        "from_asset_id": "object",
+        "to_asset_id": "object",
+        "relationship_type": "object",
+        "relationship_status": "object",
+        "evidence_id": "object",
+        "confidence_score": "float64",
+        "provenance": "object"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "dependency_id": 0,
+        "from_asset_id": 0,
+        "to_asset_id": 0,
+        "relationship_type": 0,
+        "relationship_status": 0,
+        "evidence_id": 0,
+        "confidence_score": 0,
+        "provenance": 0
+      },
+      "size_bytes": 225188
+    },
+    "flood_incident_observations.csv": {
+      "row_count": 5000,
+      "column_count": 20,
+      "columns": [
+        "flood_observation_id",
+        "event_type",
+        "observed_time",
+        "reported_time",
+        "locality",
+        "latitude",
+        "longitude",
+        "catchment_id",
+        "asset_id",
+        "water_depth_cm",
+        "affected_length_m",
+        "road_passability",
+        "rainfall_15min_mm",
+        "water_level_cm",
+        "flow_rate_lps",
+        "blockage_status",
+        "verification_status",
+        "measurement_method",
+        "is_synthetic",
+        "provenance"
+      ],
+      "dtypes": {
+        "flood_observation_id": "object",
+        "event_type": "object",
+        "observed_time": "object",
+        "reported_time": "object",
+        "locality": "object",
+        "latitude": "float64",
+        "longitude": "float64",
+        "catchment_id": "object",
+        "asset_id": "object",
+        "water_depth_cm": "float64",
+        "affected_length_m": "float64",
+        "road_passability": "object",
+        "rainfall_15min_mm": "float64",
+        "water_level_cm": "float64",
+        "flow_rate_lps": "float64",
+        "blockage_status": "object",
+        "verification_status": "object",
+        "measurement_method": "object",
+        "is_synthetic": "bool",
+        "provenance": "object"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "flood_observation_id": 0,
+        "event_type": 0,
+        "observed_time": 0,
+        "reported_time": 0,
+        "locality": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "catchment_id": 0,
+        "asset_id": 0,
+        "water_depth_cm": 2874,
+        "affected_length_m": 3564,
+        "road_passability": 0,
+        "rainfall_15min_mm": 0,
+        "water_level_cm": 0,
+        "flow_rate_lps": 0,
+        "blockage_status": 0,
+        "verification_status": 0,
+        "measurement_method": 0,
+        "is_synthetic": 0,
+        "provenance": 0
+      },
+      "size_bytes": 1059508
+    },
+    "incident_clusters.csv": {
+      "row_count": 4200,
+      "column_count": 11,
+      "columns": [
+        "incident_id",
+        "incident_type",
+        "locality",
+        "latitude",
+        "longitude",
+        "first_seen",
+        "last_seen",
+        "severity",
+        "cluster_status",
+        "is_synthetic",
+        "provenance"
+      ],
+      "dtypes": {
+        "incident_id": "object",
+        "incident_type": "object",
+        "locality": "object",
+        "latitude": "float64",
+        "longitude": "float64",
+        "first_seen": "object",
+        "last_seen": "object",
+        "severity": "object",
+        "cluster_status": "object",
+        "is_synthetic": "bool",
+        "provenance": "object"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "incident_id": 0,
+        "incident_type": 0,
+        "locality": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "first_seen": 0,
+        "last_seen": 0,
+        "severity": 0,
+        "cluster_status": 0,
+        "is_synthetic": 0,
+        "provenance": 0
+      },
+      "size_bytes": 576363
+    },
+    "infrastructure_assets.csv": {
+      "row_count": 1200,
+      "column_count": 12,
+      "columns": [
+        "asset_id",
+        "asset_type",
+        "asset_name",
+        "locality",
+        "latitude",
+        "longitude",
+        "catchment_id",
+        "design_capacity_lps",
+        "elevation_m",
+        "asset_status",
+        "data_source",
+        "is_synthetic"
+      ],
+      "dtypes": {
+        "asset_id": "object",
+        "asset_type": "object",
+        "asset_name": "object",
+        "locality": "object",
+        "latitude": "float64",
+        "longitude": "float64",
+        "catchment_id": "object",
+        "design_capacity_lps": "float64",
+        "elevation_m": "float64",
+        "asset_status": "object",
+        "data_source": "object",
+        "is_synthetic": "bool"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "asset_id": 0,
+        "asset_type": 0,
+        "asset_name": 0,
+        "locality": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "catchment_id": 615,
+        "design_capacity_lps": 983,
+        "elevation_m": 0,
+        "asset_status": 0,
+        "data_source": 0,
+        "is_synthetic": 0
+      },
+      "size_bytes": 152584
+    },
+    "observation_incident_links.csv": {
+      "row_count": 21000,
+      "column_count": 6,
+      "columns": [
+        "observation_id",
+        "incident_id",
+        "membership_score",
+        "decision_type",
+        "is_ground_truth",
+        "provenance"
+      ],
+      "dtypes": {
+        "observation_id": "object",
+        "incident_id": "object",
+        "membership_score": "float64",
+        "decision_type": "object",
+        "is_ground_truth": "bool",
+        "provenance": "object"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "observation_id": 0,
+        "incident_id": 0,
+        "membership_score": 0,
+        "decision_type": 0,
+        "is_ground_truth": 0,
+        "provenance": 0
+      },
+      "size_bytes": 1488862
+    },
+    "observations.csv": {
+      "row_count": 25000,
+      "column_count": 18,
+      "columns": [
+        "observation_id",
+        "source_id",
+        "source_type",
+        "event_time",
+        "ingested_at",
+        "event_type",
+        "text_original",
+        "text_normalized",
+        "latitude",
+        "longitude",
+        "location_text",
+        "location_accuracy_m",
+        "source_reliability_score",
+        "verification_status",
+        "is_duplicate_candidate",
+        "is_simulated",
+        "provenance",
+        "candidate_incident_id"
+      ],
+      "dtypes": {
+        "observation_id": "object",
+        "source_id": "object",
+        "source_type": "object",
+        "event_time": "object",
+        "ingested_at": "object",
+        "event_type": "object",
+        "text_original": "object",
+        "text_normalized": "object",
+        "latitude": "float64",
+        "longitude": "float64",
+        "location_text": "object",
+        "location_accuracy_m": "float64",
+        "source_reliability_score": "float64",
+        "verification_status": "object",
+        "is_duplicate_candidate": "bool",
+        "is_simulated": "bool",
+        "provenance": "object",
+        "candidate_incident_id": "object"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "observation_id": 0,
+        "source_id": 0,
+        "source_type": 0,
+        "event_time": 0,
+        "ingested_at": 0,
+        "event_type": 0,
+        "text_original": 0,
+        "text_normalized": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "location_text": 0,
+        "location_accuracy_m": 4147,
+        "source_reliability_score": 0,
+        "verification_status": 0,
+        "is_duplicate_candidate": 0,
+        "is_simulated": 0,
+        "provenance": 0,
+        "candidate_incident_id": 4000
+      },
+      "size_bytes": 6913549
+    },
+    "pairwise_relationship_training.csv": {
+      "row_count": 12000,
+      "column_count": 12,
+      "columns": [
+        "pair_id",
+        "observation_id_a",
+        "observation_id_b",
+        "time_diff_minutes",
+        "geo_distance_km",
+        "text_similarity",
+        "same_locality",
+        "same_source",
+        "reliability_product",
+        "relation_label",
+        "is_synthetic",
+        "provenance"
+      ],
+      "dtypes": {
+        "pair_id": "object",
+        "observation_id_a": "object",
+        "observation_id_b": "object",
+        "time_diff_minutes": "float64",
+        "geo_distance_km": "float64",
+        "text_similarity": "float64",
+        "same_locality": "int64",
+        "same_source": "int64",
+        "reliability_product": "float64",
+        "relation_label": "object",
+        "is_synthetic": "bool",
+        "provenance": "object"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "pair_id": 0,
+        "observation_id_a": 0,
+        "observation_id_b": 0,
+        "time_diff_minutes": 0,
+        "geo_distance_km": 0,
+        "text_similarity": 0,
+        "same_locality": 0,
+        "same_source": 0,
+        "reliability_product": 0,
+        "relation_label": 0,
+        "is_synthetic": 0,
+        "provenance": 0
+      },
+      "size_bytes": 1313394
+    },
+    "relationship_evidence_graph_edges.csv": {
+      "row_count": 18000,
+      "column_count": 12,
+      "columns": [
+        "edge_id",
+        "source_entity_type",
+        "source_entity_id",
+        "target_entity_type",
+        "target_entity_id",
+        "relationship_type",
+        "confidence_score",
+        "rule_id",
+        "evidence_ids",
+        "verification_status",
+        "explanation",
+        "is_synthetic"
+      ],
+      "dtypes": {
+        "edge_id": "object",
+        "source_entity_type": "object",
+        "source_entity_id": "object",
+        "target_entity_type": "object",
+        "target_entity_id": "object",
+        "relationship_type": "object",
+        "confidence_score": "float64",
+        "rule_id": "object",
+        "evidence_ids": "object",
+        "verification_status": "object",
+        "explanation": "object",
+        "is_synthetic": "bool"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "edge_id": 0,
+        "source_entity_type": 0,
+        "source_entity_id": 0,
+        "target_entity_type": 0,
+        "target_entity_id": 0,
+        "relationship_type": 0,
+        "confidence_score": 0,
+        "rule_id": 0,
+        "evidence_ids": 0,
+        "verification_status": 0,
+        "explanation": 0,
+        "is_synthetic": 0
+      },
+      "size_bytes": 3436807
+    },
+    "route_impacts.csv": {
+      "row_count": 5000,
+      "column_count": 11,
+      "columns": [
+        "route_impact_id",
+        "route_id",
+        "incident_id",
+        "segment_id",
+        "impact_type",
+        "distance_from_route_m",
+        "valid_from",
+        "valid_to",
+        "impact_confidence",
+        "verification_status",
+        "is_synthetic"
+      ],
+      "dtypes": {
+        "route_impact_id": "object",
+        "route_id": "object",
+        "incident_id": "object",
+        "segment_id": "object",
+        "impact_type": "object",
+        "distance_from_route_m": "float64",
+        "valid_from": "object",
+        "valid_to": "object",
+        "impact_confidence": "float64",
+        "verification_status": "object",
+        "is_synthetic": "bool"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "route_impact_id": 0,
+        "route_id": 0,
+        "incident_id": 0,
+        "segment_id": 0,
+        "impact_type": 0,
+        "distance_from_route_m": 0,
+        "valid_from": 0,
+        "valid_to": 0,
+        "impact_confidence": 0,
+        "verification_status": 0,
+        "is_synthetic": 0
+      },
+      "size_bytes": 635678
+    },
+    "routes.csv": {
+      "row_count": 40,
+      "column_count": 11,
+      "columns": [
+        "route_id",
+        "origin_name",
+        "origin_lat",
+        "origin_lon",
+        "destination_name",
+        "destination_lat",
+        "destination_lon",
+        "travel_mode",
+        "routing_provider",
+        "geometry_status",
+        "is_synthetic"
+      ],
+      "dtypes": {
+        "route_id": "object",
+        "origin_name": "object",
+        "origin_lat": "float64",
+        "origin_lon": "float64",
+        "destination_name": "object",
+        "destination_lat": "float64",
+        "destination_lon": "float64",
+        "travel_mode": "object",
+        "routing_provider": "object",
+        "geometry_status": "object",
+        "is_synthetic": "bool"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "route_id": 0,
+        "origin_name": 0,
+        "origin_lat": 0,
+        "origin_lon": 0,
+        "destination_name": 0,
+        "destination_lat": 0,
+        "destination_lon": 0,
+        "travel_mode": 0,
+        "routing_provider": 0,
+        "geometry_status": 0,
+        "is_synthetic": 0
+      },
+      "size_bytes": 4838
+    },
+    "sensor_readings.csv": {
+      "row_count": 15000,
+      "column_count": 17,
+      "columns": [
+        "reading_id",
+        "sensor_id",
+        "timestamp",
+        "latitude",
+        "longitude",
+        "rainfall_15min_mm",
+        "rainfall_1hr_mm",
+        "water_level_cm",
+        "water_level_change_cm",
+        "flow_rate_lps",
+        "drainage_capacity_pct",
+        "blockage_probability",
+        "pump_status",
+        "sensor_health",
+        "data_quality",
+        "is_synthetic",
+        "provenance"
+      ],
+      "dtypes": {
+        "reading_id": "object",
+        "sensor_id": "object",
+        "timestamp": "object",
+        "latitude": "float64",
+        "longitude": "float64",
+        "rainfall_15min_mm": "float64",
+        "rainfall_1hr_mm": "float64",
+        "water_level_cm": "float64",
+        "water_level_change_cm": "float64",
+        "flow_rate_lps": "float64",
+        "drainage_capacity_pct": "float64",
+        "blockage_probability": "float64",
+        "pump_status": "object",
+        "sensor_health": "object",
+        "data_quality": "object",
+        "is_synthetic": "bool",
+        "provenance": "object"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "reading_id": 0,
+        "sensor_id": 0,
+        "timestamp": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "rainfall_15min_mm": 0,
+        "rainfall_1hr_mm": 0,
+        "water_level_cm": 0,
+        "water_level_change_cm": 0,
+        "flow_rate_lps": 0,
+        "drainage_capacity_pct": 0,
+        "blockage_probability": 0,
+        "pump_status": 0,
+        "sensor_health": 0,
+        "data_quality": 0,
+        "is_synthetic": 0,
+        "provenance": 0
+      },
+      "size_bytes": 2273424
+    },
+    "social_media_posts.csv": {
+      "row_count": 6000,
+      "column_count": 15,
+      "columns": [
+        "post_id",
+        "platform",
+        "platform_post_id",
+        "post_time",
+        "collected_at",
+        "text_original",
+        "language",
+        "latitude",
+        "longitude",
+        "location_text",
+        "permalink",
+        "collection_method",
+        "collection_status",
+        "is_synthetic",
+        "provenance"
+      ],
+      "dtypes": {
+        "post_id": "object",
+        "platform": "object",
+        "platform_post_id": "object",
+        "post_time": "object",
+        "collected_at": "object",
+        "text_original": "object",
+        "language": "object",
+        "latitude": "float64",
+        "longitude": "float64",
+        "location_text": "object",
+        "permalink": "float64",
+        "collection_method": "object",
+        "collection_status": "object",
+        "is_synthetic": "bool",
+        "provenance": "object"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "post_id": 0,
+        "platform": 0,
+        "platform_post_id": 0,
+        "post_time": 0,
+        "collected_at": 0,
+        "text_original": 0,
+        "language": 0,
+        "latitude": 2669,
+        "longitude": 2669,
+        "location_text": 1510,
+        "permalink": 6000,
+        "collection_method": 0,
+        "collection_status": 0,
+        "is_synthetic": 0,
+        "provenance": 0
+      },
+      "size_bytes": 1174337
+    },
+    "social_post_analysis.csv": {
+      "row_count": 6000,
+      "column_count": 11,
+      "columns": [
+        "post_id",
+        "incident_relevance_score",
+        "predicted_event_type",
+        "extracted_location",
+        "event_time_estimate",
+        "duplicate_score",
+        "spam_or_repost_flag",
+        "evidence_quality",
+        "model_version",
+        "review_status",
+        "is_synthetic"
+      ],
+      "dtypes": {
+        "post_id": "object",
+        "incident_relevance_score": "float64",
+        "predicted_event_type": "object",
+        "extracted_location": "object",
+        "event_time_estimate": "object",
+        "duplicate_score": "float64",
+        "spam_or_repost_flag": "bool",
+        "evidence_quality": "object",
+        "model_version": "object",
+        "review_status": "object",
+        "is_synthetic": "bool"
+      },
+      "exact_duplicate_rows": 0,
+      "null_counts": {
+        "post_id": 0,
+        "incident_relevance_score": 0,
+        "predicted_event_type": 0,
+        "extracted_location": 900,
+        "event_time_estimate": 0,
+        "duplicate_score": 0,
+        "spam_or_repost_flag": 0,
+        "evidence_quality": 0,
+        "model_version": 0,
+        "review_status": 0,
+        "is_synthetic": 0
+      },
+      "size_bytes": 704091
+    }
+  },
+  "referential_integrity": {
+    "links_to_observations": {
+      "total_links": 21000,
+      "missing_observation_ids": 0,
+      "missing_pct": 0.0
+    },
+    "links_to_incidents": {
+      "total_links": 21000,
+      "missing_incident_ids": 0,
+      "missing_pct": 0.0
+    },
+    "observations_candidate_incident_id_validity": {
+      "total_observations": 25000,
+      "populated_candidate_ids": 21000,
+      "null_candidate_ids": 4000,
+      "missing_in_incident_clusters": 0
+    },
+    "observations_source_types": {
+      "TRANSIT_FEED": 3191,
+      "CITIZEN_REPORT": 3178,
+      "OFFICIAL_FEED": 3159,
+      "SENSOR": 3155,
+      "SIMULATED_TEST": 3128,
+      "WEATHER_FEED": 3074,
+      "TRAFFIC_FEED": 3068,
+      "SOCIAL_MEDIA": 3047
+    },
+    "social_observations_to_posts": {
+      "total_social_obs": 0,
+      "matching_post_id": 0,
+      "missing_source_id": 0
+    },
+    "sensor_observations_to_readings": {
+      "total_sensor_obs": 0,
+      "matches_reading_id": 0,
+      "matches_sensor_id": 0,
+      "neither": 0
+    },
+    "asset_dependencies_endpoints": {
+      "total_dependencies": 2500,
+      "missing_from_asset_id": 0,
+      "missing_to_asset_id": 0
+    },
+    "sensor_readings_to_infrastructure": {
+      "total_readings": 15000,
+      "missing_sensor_id_in_assets": 0,
+      "unique_sensors_in_readings": 595,
+      "unique_sensors_in_assets": 0
+    },
+    "social_post_analysis_to_posts": {
+      "total_analyses": 6000,
+      "missing_post_id": 0
+    },
+    "flood_observations_to_assets": {
+      "total_flood_obs": 5000,
+      "null_asset_ids": 0,
+      "populated_asset_ids": 5000,
+      "missing_in_assets": 0
+    },
+    "pairwise_training_to_observations": {
+      "total_pairs": 12000,
+      "missing_observation_a": 0,
+      "missing_observation_b": 0
+    },
+    "graph_edge_entity_types": {
+      "source_types": {
+        "SOCIAL_POST": 4540,
+        "OBSERVATION": 4520,
+        "ASSET": 4470,
+        "INCIDENT": 4470
+      },
+      "target_types": {
+        "ROUTE": 3659,
+        "ASSET": 3634,
+        "OBSERVATION": 3604,
+        "INCIDENT": 3566,
+        "LOCATION": 3537
+      }
+    },
+    "graph_edge_referential_integrity": {
+      "total_edges": 18000,
+      "invalid_source_entities": 18000,
+      "invalid_target_entities": 18000
+    },
+    "route_impacts_references": {
+      "total_route_impacts": 5000,
+      "missing_route_id": 0,
+      "missing_incident_id": 0,
+      "unique_routes_impacted": 40,
+      "total_known_routes": 40
+    }
+  },
+  "label_distributions": {
+    "pairwise_relation_label": {
+      "counts": {
+        "SAME_INCIDENT": 4075,
+        "UNRELATED": 2676,
+        "RELATED_BUT_DISTINCT": 2367,
+        "DUPLICATE": 1886,
+        "CONTRADICTORY": 996
+      },
+      "percentages": {
+        "SAME_INCIDENT": 33.96,
+        "UNRELATED": 22.3,
+        "RELATED_BUT_DISTINCT": 19.73,
+        "DUPLICATE": 15.72,
+        "CONTRADICTORY": 8.3
+      }
+    },
+    "observation_links_decision_type": {
+      "counts": {
+        "MANUAL_SIMULATED": 7079,
+        "MODEL_CANDIDATE": 6970,
+        "RULE_CANDIDATE": 6951
+      },
+      "percentages": {
+        "MANUAL_SIMULATED": 33.71,
+        "MODEL_CANDIDATE": 33.19,
+        "RULE_CANDIDATE": 33.1
+      }
+    },
+    "observation_links_is_ground_truth": {
+      "counts": {
+        "false": 21000
+      }
+    },
+    "observation_links_membership_score_stats": {
+      "min": 0.45,
+      "max": 0.99,
+      "mean": 0.7195054285714285,
+      "median": 0.719,
+      "std": 0.15484726869337515
+    },
+    "incident_severity": {
+      "counts": {
+        "MODERATE": 1774,
+        "MAJOR": 1264,
+        "LOW": 743,
+        "CRITICAL": 419
+      },
+      "percentages": {
+        "MODERATE": 42.24,
+        "MAJOR": 30.1,
+        "LOW": 17.69,
+        "CRITICAL": 9.98
+      }
+    },
+    "incident_type": {
+      "counts": {
+        "MANHOLE_OVERFLOW": 255,
+        "GENERAL_INCIDENT": 253,
+        "DRAIN_BLOCKAGE": 250,
+        "ROAD_ACCIDENT": 249,
+        "SUBWAY_INUNDATION": 245,
+        "PUMP_FAILURE": 241,
+        "FIRE_REPORT": 241,
+        "TREE_FALL": 236,
+        "WATER_LEVEL_RISE": 235,
+        "HEAVY_RAINFALL": 231,
+        "ROAD_CLOSURE": 230,
+        "TRANSIT_DELAY": 229,
+        "TRAFFIC_SLOWDOWN": 226,
+        "OHE_WIRE_FAILURE": 225,
+        "RAIL_SIGNAL_FAILURE": 218,
+        "POWER_FAILURE": 214,
+        "ROAD_WATERLOGGING": 213,
+        "SENSOR_ANOMALY": 209
+      },
+      "percentages": {
+        "MANHOLE_OVERFLOW": 6.07,
+        "GENERAL_INCIDENT": 6.02,
+        "DRAIN_BLOCKAGE": 5.95,
+        "ROAD_ACCIDENT": 5.93,
+        "SUBWAY_INUNDATION": 5.83,
+        "PUMP_FAILURE": 5.74,
+        "FIRE_REPORT": 5.74,
+        "TREE_FALL": 5.62,
+        "WATER_LEVEL_RISE": 5.6,
+        "HEAVY_RAINFALL": 5.5,
+        "ROAD_CLOSURE": 5.48,
+        "TRANSIT_DELAY": 5.45,
+        "TRAFFIC_SLOWDOWN": 5.38,
+        "OHE_WIRE_FAILURE": 5.36,
+        "RAIL_SIGNAL_FAILURE": 5.19,
+        "POWER_FAILURE": 5.1,
+        "ROAD_WATERLOGGING": 5.07,
+        "SENSOR_ANOMALY": 4.98
+      }
+    },
+    "cluster_status": {
+      "counts": {
+        "INVESTIGATING": 895,
+        "RESOLVED": 869,
+        "CANDIDATE": 843,
+        "DISPUTED": 837,
+        "DETECTED": 756
+      }
+    },
+    "route_impact_type": {
+      "counts": {
+        "ON_ROUTE": 1041,
+        "POSSIBLE_DELAY": 1004,
+        "NEAR_ROUTE_CANDIDATE": 999,
+        "NO_CONFIRMED_IMPACT": 998,
+        "CLOSURE": 958
+      },
+      "percentages": {
+        "ON_ROUTE": 20.82,
+        "POSSIBLE_DELAY": 20.08,
+        "NEAR_ROUTE_CANDIDATE": 19.98,
+        "NO_CONFIRMED_IMPACT": 19.96,
+        "CLOSURE": 19.16
+      }
+    },
+    "route_impact_verification_status": {
+      "counts": {
+        "UNVERIFIED": 1703,
+        "CANDIDATE": 1685,
+        "CONFIRMED_SIMULATED": 1612
+      }
+    },
+    "flood_road_passability": {
+      "counts": {
+        "RESTRICTED": 1031,
+        "UNKNOWN": 1007,
+        "SLOW": 1005,
+        "CLOSED": 986,
+        "OPEN": 971
+      },
+      "percentages": {
+        "RESTRICTED": 20.62,
+        "UNKNOWN": 20.14,
+        "SLOW": 20.1,
+        "CLOSED": 19.72,
+        "OPEN": 19.42
+      }
+    },
+    "flood_blockage_status": {
+      "counts": {
+        "CONFIRMED": 1267,
+        "UNKNOWN": 1250,
+        "SUSPECTED": 1248,
+        "CLEAR": 1235
+      }
+    },
+    "sensor_health": {
+      "counts": {
+        "HEALTHY": 9017,
+        "DEGRADED": 3020,
+        "OFFLINE": 2963
+      }
+    },
+    "pump_status": {
+      "counts": {
+        "RUNNING": 3826,
+        "OFFLINE": 3795,
+        "NOT_APPLICABLE": 3700,
+        "FAILED": 3679
+      }
+    }
+  },
+  "leakage_and_synthetic_analysis": {
+    "synthetic_flag_manifest": {
+      "asset_dependencies.csv": {
+        "provenance": {
+          "SYNTHETIC_GENERATED": 2500
+        }
+      },
+      "flood_incident_observations.csv": {
+        "is_synthetic": {
+          "true": 5000
+        },
+        "provenance": {
+          "SYNTHETIC_GENERATED": 5000
+        }
+      },
+      "incident_clusters.csv": {
+        "is_synthetic": {
+          "true": 4200
+        },
+        "provenance": {
+          "SYNTHETIC_GENERATED": 4200
+        }
+      },
+      "infrastructure_assets.csv": {
+        "is_synthetic": {
+          "true": 1200
+        }
+      },
+      "observation_incident_links.csv": {
+        "provenance": {
+          "SYNTHETIC_GENERATED": 21000
+        }
+      },
+      "observations.csv": {
+        "is_simulated": {
+          "true": 25000
+        },
+        "provenance": {
+          "SYNTHETIC_GENERATED": 25000
+        }
+      },
+      "pairwise_relationship_training.csv": {
+        "is_synthetic": {
+          "true": 12000
+        },
+        "provenance": {
+          "SYNTHETIC_GENERATED_LABELS": 12000
+        }
+      },
+      "relationship_evidence_graph_edges.csv": {
+        "is_synthetic": {
+          "true": 18000
+        }
+      },
+      "route_impacts.csv": {
+        "is_synthetic": {
+          "true": 5000
+        }
+      },
+      "routes.csv": {
+        "is_synthetic": {
+          "true": 40
+        }
+      },
+      "sensor_readings.csv": {
+        "is_synthetic": {
+          "true": 15000
+        },
+        "provenance": {
+          "SYNTHETIC_GENERATED": 15000
+        }
+      },
+      "social_media_posts.csv": {
+        "is_synthetic": {
+          "true": 6000
+        },
+        "provenance": {
+          "SYNTHETIC_GENERATED": 6000
+        }
+      },
+      "social_post_analysis.csv": {
+        "is_synthetic": {
+          "true": 6000
+        }
+      }
+    },
+    "pairwise_feature_correlations": {
+      "time_diff_minutes": {
+        "time_diff_minutes": 1.0,
+        "geo_distance_km": 0.6876,
+        "text_similarity": -0.6932,
+        "same_locality": -0.5001,
+        "same_source": 0.0063,
+        "reliability_product": 0.0056,
+        "label_binary": -0.3687
+      },
+      "geo_distance_km": {
+        "time_diff_minutes": 0.6876,
+        "geo_distance_km": 1.0,
+        "text_similarity": -0.7218,
+        "same_locality": -0.5142,
+        "same_source": -0.0051,
+        "reliability_product": 0.0111,
+        "label_binary": -0.3787
+      },
+      "text_similarity": {
+        "time_diff_minutes": -0.6932,
+        "geo_distance_km": -0.7218,
+        "text_similarity": 1.0,
+        "same_locality": 0.5699,
+        "same_source": -0.0033,
+        "reliability_product": -0.0117,
+        "label_binary": 0.5148
+      },
+      "same_locality": {
+        "time_diff_minutes": -0.5001,
+        "geo_distance_km": -0.5142,
+        "text_similarity": 0.5699,
+        "same_locality": 1.0,
+        "same_source": -0.0064,
+        "reliability_product": -0.0042,
+        "label_binary": 0.4128
+      },
+      "same_source": {
+        "time_diff_minutes": 0.0063,
+        "geo_distance_km": -0.0051,
+        "text_similarity": -0.0033,
+        "same_locality": -0.0064,
+        "same_source": 1.0,
+        "reliability_product": 0.0122,
+        "label_binary": -0.0103
+      },
+      "reliability_product": {
+        "time_diff_minutes": 0.0056,
+        "geo_distance_km": 0.0111,
+        "text_similarity": -0.0117,
+        "same_locality": -0.0042,
+        "same_source": 0.0122,
+        "reliability_product": 1.0,
+        "label_binary": -0.0055
+      },
+      "label_binary": {
+        "time_diff_minutes": -0.3687,
+        "geo_distance_km": -0.3787,
+        "text_similarity": 0.5148,
+        "same_locality": 0.4128,
+        "same_source": -0.0103,
+        "reliability_product": -0.0055,
+        "label_binary": 1.0
+      }
+    },
+    "pairwise_separability_checks": {
+      "mean_geo_dist_same": 0.36308907975460125,
+      "mean_geo_dist_diff": NaN,
+      "mean_text_sim_same": 0.8191896932515338,
+      "mean_text_sim_diff": NaN,
+      "mean_time_diff_same": 19.915739877300613,
+      "mean_time_diff_diff": NaN
+    },
+    "observations_candidate_incident_id_leakage": {
+      "has_candidate_incident_id": true,
+      "non_null_count": 21000,
+      "total_count": 25000,
+      "percentage_labeled": 84.0,
+      "note": "CRITICAL DATA LEAKAGE RISK: candidate_incident_id is a ground-truth cluster label directly stored inside the raw observation input stream!"
+    },
+    "social_post_analysis_ground_truth": {
+      "columns": [
+        "post_id",
+        "incident_relevance_score",
+        "predicted_event_type",
+        "extracted_location",
+        "event_time_estimate",
+        "duplicate_score",
+        "spam_or_repost_flag",
+        "evidence_quality",
+        "model_version",
+        "review_status",
+        "is_synthetic"
+      ],
+      "note": "incident_relevance_score, predicted_event_type, extracted_location are synthetic model predictions / pseudo-labels, NOT raw inputs."
+    }
+  },
+  "group_split_analysis": {
+    "links_per_incident": {
+      "total_unique_incidents": 4173,
+      "min_observations_per_incident": 1,
+      "max_observations_per_incident": 16,
+      "mean_observations_per_incident": 5.03235082674335,
+      "median_observations_per_incident": 5.0
+    },
+    "pairwise_incident_mapping": {
+      "total_pairs": 12000,
+      "pairs_with_both_incidents_known": 8524,
+      "incident_cluster_label_agreement_pct": 66.03333333333333,
+      "recommendation": "Pairwise split MUST partition incidents into disjoint sets. If incident I1 is in train, no pair containing any observation from I1 can be in val/test."
+    }
+  },
+  "primary_key_checks": {
+    "observations.csv": {
+      "key": "observation_id",
+      "is_unique": true,
+      "unique_values": 25000,
+      "total_rows": 25000,
+      "null_keys": 0
+    },
+    "incident_clusters.csv": {
+      "key": "incident_id",
+      "is_unique": true,
+      "unique_values": 4200,
+      "total_rows": 4200,
+      "null_keys": 0
+    },
+    "infrastructure_assets.csv": {
+      "key": "asset_id",
+      "is_unique": true,
+      "unique_values": 1200,
+      "total_rows": 1200,
+      "null_keys": 0
+    },
+    "asset_dependencies.csv": {
+      "key": "dependency_id",
+      "is_unique": true,
+      "unique_values": 2500,
+      "total_rows": 2500,
+      "null_keys": 0
+    },
+    "sensor_readings.csv": {
+      "key": "reading_id",
+      "is_unique": true,
+      "unique_values": 15000,
+      "total_rows": 15000,
+      "null_keys": 0
+    },
+    "social_media_posts.csv": {
+      "key": "post_id",
+      "is_unique": true,
+      "unique_values": 6000,
+      "total_rows": 6000,
+      "null_keys": 0
+    },
+    "social_post_analysis.csv": {
+      "key": "post_id",
+      "is_unique": true,
+      "unique_values": 6000,
+      "total_rows": 6000,
+      "null_keys": 0
+    },
+    "flood_incident_observations.csv": {
+      "key": "flood_observation_id",
+      "is_unique": true,
+      "unique_values": 5000,
+      "total_rows": 5000,
+      "null_keys": 0
+    },
+    "pairwise_relationship_training.csv": {
+      "key": "pair_id",
+      "is_unique": true,
+      "unique_values": 12000,
+      "total_rows": 12000,
+      "null_keys": 0
+    },
+    "relationship_evidence_graph_edges.csv": {
+      "key": "edge_id",
+      "is_unique": true,
+      "unique_values": 18000,
+      "total_rows": 18000,
+      "null_keys": 0
+    },
+    "routes.csv": {
+      "key": "route_id",
+      "is_unique": true,
+      "unique_values": 40,
+      "total_rows": 40,
+      "null_keys": 0
+    },
+    "route_impacts.csv": {
+      "key": "route_impact_id",
+      "is_unique": true,
+      "unique_values": 5000,
+      "total_rows": 5000,
+      "null_keys": 0
+    },
+    "observation_incident_links.csv": {
+      "key": "(observation_id, incident_id)",
+      "is_unique": true,
+      "duplicate_pairs": 0
+    }
+  }
+}

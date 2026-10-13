@@ -1,0 +1,165 @@
+dataset_file,column_name,data_type,null_count,null_percentage,unique_values_count,structural_role,description,sample_value
+asset_dependencies.csv,dependency_id,object,0,0.0,2500,Primary Key,Unique dependency relationship identifier,DEP-000001
+asset_dependencies.csv,from_asset_id,object,0,0.0,1056,Foreign Key,Upstream / source asset identifier,AST-00921
+asset_dependencies.csv,to_asset_id,object,0,0.0,1048,Foreign Key,Downstream / dependent asset identifier,AST-00925
+asset_dependencies.csv,relationship_type,object,0,0.0,7,Graph Edge Attribute,"Graph dependency type (e.g. DRAINS_TO, POWERS, MONITORS)",POWERED_BY
+asset_dependencies.csv,relationship_status,object,0,0.0,3,Graph Edge Attribute,Verification state of dependency edge,UNVERIFIED
+asset_dependencies.csv,evidence_id,object,0,0.0,2387,Graph Rationale,Rule or telemetry evidence supporting dependency edge,OBS-0015836
+asset_dependencies.csv,confidence_score,float64,0,0.0,624,Graph Edge Weight,Confidence in dependency link [0.0 - 1.0],0.771
+asset_dependencies.csv,provenance,object,0,0.0,1,Provenance Metadata,Provenance label: SYNTHETIC_GENERATED,SYNTHETIC_GENERATED
+flood_incident_observations.csv,flood_observation_id,object,0,0.0,5000,Primary Key,Unique flood observation identifier,FLOOD-000001
+flood_incident_observations.csv,event_type,object,0,0.0,7,Event Type Feature,"Flood incident event type (e.g. WATERLOGGING, MANHOLE_OVERFLOW)",SUBWAY_INUNDATION
+flood_incident_observations.csv,observed_time,object,0,0.0,5000,Temporal Feature,Field observation timestamp,2026-03-10T21:33:40
+flood_incident_observations.csv,reported_time,object,0,0.0,4999,Temporal Metadata,Reporting timestamp,2026-03-10T22:40:40
+flood_incident_observations.csv,locality,object,0,0.0,8,Spatial Feature,Suburban Mumbai locality name,Andheri
+flood_incident_observations.csv,latitude,float64,0,0.0,4852,Spatial Coordinate,Flood location latitude,19.117142
+flood_incident_observations.csv,longitude,float64,0,0.0,4580,Spatial Coordinate,Flood location longitude,72.84727
+flood_incident_observations.csv,catchment_id,object,0,0.0,80,Hydrology Feature,Hydrological catchment identifier,CAT-036
+flood_incident_observations.csv,asset_id,object,0,0.0,461,Foreign Key,Associated asset ID in infrastructure_assets,AST-00667
+flood_incident_observations.csv,water_depth_cm,float64,2874,57.48,1319,Severity Feature,Estimated inundation depth (cm),0.0
+flood_incident_observations.csv,affected_length_m,float64,3564,71.28,938,Impact Feature,Length of roadway inundated in meters,34.8
+flood_incident_observations.csv,road_passability,object,0,0.0,5,Disruption Target / Label,"Road status (RESTRICTED, SLOW, CLOSED, OPEN, UNKNOWN)",UNKNOWN
+flood_incident_observations.csv,rainfall_15min_mm,float64,0,0.0,978,Environmental Feature,Local 15-minute rainfall (mm),0.26
+flood_incident_observations.csv,water_level_cm,float64,0,0.0,3619,Environmental Feature,Associated drainage canal water level (cm),21.8
+flood_incident_observations.csv,flow_rate_lps,float64,0,0.0,4237,Environmental Feature,Stormwater discharge rate (lps),93.74
+flood_incident_observations.csv,blockage_status,object,0,0.0,4,Diagnostic State,"Drainage blockage state (CONFIRMED, SUSPECTED, CLEAR, UNKNOWN)",SUSPECTED
+flood_incident_observations.csv,verification_status,object,0,0.0,4,Verification Status,Verification state,CORROBORATED
+flood_incident_observations.csv,measurement_method,object,0,0.0,3,Methodology,"Measurement mechanism (GAUGE, VISUAL, SENSOR)",SIMULATED_OFFICIAL_REPORT
+flood_incident_observations.csv,is_synthetic,bool,0,0.0,1,Provenance Metadata,Boolean synthetic flag,True
+flood_incident_observations.csv,provenance,object,0,0.0,1,Provenance Metadata,Provenance label: SYNTHETIC_GENERATED,SYNTHETIC_GENERATED
+incident_clusters.csv,incident_id,object,0,0.0,4200,Primary Key,Unique canonical incident cluster identifier,INC-000001
+incident_clusters.csv,incident_type,object,0,0.0,18,Cluster Target / Label,Primary incident category,ROAD_WATERLOGGING
+incident_clusters.csv,locality,object,0,0.0,8,Spatial Metadata,"Suburban locality center (e.g. Andheri West, Borivali)",Borivali
+incident_clusters.csv,latitude,float64,0,0.0,4109,Spatial Feature / Centroid,Cluster centroid latitude,19.231738
+incident_clusters.csv,longitude,float64,0,0.0,3908,Spatial Feature / Centroid,Cluster centroid longitude,72.855516
+incident_clusters.csv,first_seen,object,0,0.0,4200,Temporal Metadata,Earliest observation timestamp contributing to incident,2026-04-17T19:27:32
+incident_clusters.csv,last_seen,object,0,0.0,4199,Temporal Metadata,Latest observation timestamp contributing to incident,2026-04-17T20:43:32
+incident_clusters.csv,severity,object,0,0.0,4,Cluster Target / Label,"Categorical incident severity (LOW, MODERATE, MAJOR, CRITICAL)",MODERATE
+incident_clusters.csv,cluster_status,object,0,0.0,5,Status Metadata,"Incident status (INVESTIGATING, RESOLVED, CANDIDATE, DISPUTED, DETECTED)",CANDIDATE
+incident_clusters.csv,is_synthetic,bool,0,0.0,1,Provenance Metadata,Boolean flag indicating synthetic record,True
+incident_clusters.csv,provenance,object,0,0.0,1,Provenance Metadata,Provenance label: SYNTHETIC_GENERATED,SYNTHETIC_GENERATED
+infrastructure_assets.csv,asset_id,object,0,0.0,1200,Primary Key,Unique infrastructure asset identifier,AST-00001
+infrastructure_assets.csv,asset_type,object,0,0.0,10,Infrastructure Feature,"Asset class (e.g. DRAIN, PUMP_STATION, RAIN_GAUGE, ROAD_SEGMENT)",SUBWAY_UNDERPASS
+infrastructure_assets.csv,asset_name,object,0,0.0,1200,Descriptor Metadata,Human-readable name or asset code,Goregaon_subway_underpass_0001
+infrastructure_assets.csv,locality,object,0,0.0,8,Spatial Metadata,Suburban locality name,Goregaon
+infrastructure_assets.csv,latitude,float64,0,0.0,1188,Spatial Coordinate,Asset installation latitude,19.172339
+infrastructure_assets.csv,longitude,float64,0,0.0,1170,Spatial Coordinate,Asset installation longitude,72.844285
+infrastructure_assets.csv,catchment_id,object,615,51.25,80,Hydrology Feature,Hydrological catchment basin identifier,CAT-030
+infrastructure_assets.csv,design_capacity_lps,float64,983,81.92,217,Engineering Feature,Design drainage capacity in liters per second,1171.49
+infrastructure_assets.csv,elevation_m,float64,0,0.0,1059,Topographic Feature,Elevation above mean sea level in meters,35.72
+infrastructure_assets.csv,asset_status,object,0,0.0,3,Status Feature,Operational status of the infrastructure asset,ACTIVE
+infrastructure_assets.csv,data_source,object,0,0.0,2,Provenance Metadata,Synthetic source generation tag,SYNTHETIC_ASSET_REGISTER
+infrastructure_assets.csv,is_synthetic,bool,0,0.0,1,Provenance Metadata,Boolean synthetic flag,True
+observation_incident_links.csv,observation_id,object,0,0.0,21000,Foreign Key,Referenced observation ID,OBS-0000001
+observation_incident_links.csv,incident_id,object,0,0.0,4173,Foreign Key,Referenced candidate incident cluster ID,INC-001085
+observation_incident_links.csv,membership_score,float64,0,0.0,541,Candidate Feature / Score,Candidate cluster membership probability / confidence [0.0 - 1.0],0.849
+observation_incident_links.csv,decision_type,object,0,0.0,3,Method Metadata,"Clustering decision source (MANUAL_SIMULATED, MODEL_CANDIDATE, RULE_CANDIDATE)",RULE_CANDIDATE
+observation_incident_links.csv,is_ground_truth,bool,0,0.0,1,Evaluation Ground Truth,Verification flag indicating confirmed association (all false),False
+observation_incident_links.csv,provenance,object,0,0.0,1,Provenance Metadata,Provenance label: SYNTHETIC_GENERATED,SYNTHETIC_GENERATED
+observations.csv,observation_id,object,0,0.0,25000,Primary Key,Unique identifier for each multimodal observation,OBS-0000001
+observations.csv,source_id,object,0,0.0,8,Foreign Key / Source Ref,Identifier of the originating source channel/feed,SRC-TRANSIT_FEED
+observations.csv,source_type,object,0,0.0,8,Inference Feature,"Modality/channel category (e.g. SENSOR, SOCIAL_MEDIA, CITIZEN_REPORT)",TRANSIT_FEED
+observations.csv,event_time,object,0,0.0,24737,Inference Feature,Timestamp when the incident or telemetry event occurred,2026-10-09T15:32:33
+observations.csv,ingested_at,object,0,0.0,24991,System Metadata,Timestamp when the observation was ingested into the pipeline,2026-10-09T16:13:09
+observations.csv,event_type,object,0,0.0,18,Inference Feature / Label,"Observed event category (e.g. WATERLOGGING, ACCIDENT, PUMP_FAILURE)",TRAFFIC_SLOWDOWN
+observations.csv,text_original,object,0,0.0,1410,Inference Feature (NLP),Raw unnormalized text description or report narrative,travel speed dropped near Jogeshwari
+observations.csv,text_normalized,object,0,0.0,1410,Inference Feature (NLP),"Cleaned, normalized text representation for embedding/matching",travel speed dropped near jogeshwari
+observations.csv,latitude,float64,0,0.0,21774,Inference Feature (Spatial),Geographic latitude in decimal degrees (WGS84),19.134391
+observations.csv,longitude,float64,0,0.0,16729,Inference Feature (Spatial),Geographic longitude in decimal degrees (WGS84),72.85068
+observations.csv,location_text,object,0,0.0,8,Inference Feature,Locality or landmark name in Mumbai Western Suburbs,Jogeshwari
+observations.csv,location_accuracy_m,float64,4147,16.59,5,Inference Feature,Reported spatial accuracy in meters,25.0
+observations.csv,source_reliability_score,float64,0,0.0,866,Inference Feature,Heuristic trust score of the reporting source [0.0 - 1.0],0.99
+observations.csv,verification_status,object,0,0.0,4,Evaluation / Filter,"Verification lifecycle state (e.g. VERIFIED, UNVERIFIED)",CORROBORATED
+observations.csv,is_duplicate_candidate,bool,0,0.0,2,Inference Feature / Label,Flag indicating potential duplicate observation,False
+observations.csv,is_simulated,bool,0,0.0,1,Provenance Metadata,Boolean flag confirming synthetic simulation provenance,True
+observations.csv,provenance,object,0,0.0,1,Provenance Metadata,Provenance label: SYNTHETIC_GENERATED,SYNTHETIC_GENERATED
+observations.csv,candidate_incident_id,object,4000,16.0,4173,Ground-Truth Label (EVAL ONLY),Ground-truth / candidate linked incident cluster ID (LEAKAGE HAZARD),INC-001085
+pairwise_relationship_training.csv,pair_id,object,0,0.0,12000,Primary Key,Unique observation pair identifier,PAIR-000001
+pairwise_relationship_training.csv,observation_id_a,object,0,0.0,9575,Foreign Key,Observation A ID matching observations.csv,OBS-0016167
+pairwise_relationship_training.csv,observation_id_b,object,0,0.0,9554,Foreign Key,Observation B ID matching observations.csv,OBS-0014996
+pairwise_relationship_training.csv,time_diff_minutes,float64,0,0.0,7573,Pairwise Feature,Temporal offset between observations in minutes,36.23
+pairwise_relationship_training.csv,geo_distance_km,float64,0,0.0,3759,Pairwise Feature,Haversine geographic distance in kilometers,0.586
+pairwise_relationship_training.csv,text_similarity,float64,0,0.0,1001,Pairwise Feature,Semantic text embedding cosine similarity [0.0 - 1.0],0.416
+pairwise_relationship_training.csv,same_locality,int64,0,0.0,2,Pairwise Feature,Binary indicator if both observations share locality (1/0),1
+pairwise_relationship_training.csv,same_source,int64,0,0.0,2,Pairwise Feature,Binary indicator if both observations share source channel (1/0),1
+pairwise_relationship_training.csv,reliability_product,float64,0,0.0,961,Pairwise Feature,Product of source reliability scores [0.0 - 1.0],0.828
+pairwise_relationship_training.csv,relation_label,object,0,0.0,5,Training Target / Label,Ground-truth pair relationship class (5 classes),CONTRADICTORY
+pairwise_relationship_training.csv,is_synthetic,bool,0,0.0,1,Provenance Metadata,Boolean synthetic flag,True
+pairwise_relationship_training.csv,provenance,object,0,0.0,1,Provenance Metadata,Provenance label: SYNTHETIC_GENERATED_LABELS,SYNTHETIC_GENERATED_LABELS
+relationship_evidence_graph_edges.csv,edge_id,object,0,0.0,18000,Primary Key,Unique knowledge graph edge identifier,EDGE-0000001
+relationship_evidence_graph_edges.csv,source_entity_type,object,0,0.0,4,Graph Meta-Type,"Entity category of source node (INCIDENT, OBSERVATION, ASSET, SOCIAL_POST)",INCIDENT
+relationship_evidence_graph_edges.csv,source_entity_id,object,0,0.0,11202,Graph Node FK,Identifier of source entity node,INC-002612
+relationship_evidence_graph_edges.csv,target_entity_type,object,0,0.0,5,Graph Meta-Type,"Entity category of target node (INCIDENT, OBSERVATION, ASSET, ROUTE, LOCATION)",OBSERVATION
+relationship_evidence_graph_edges.csv,target_entity_id,object,0,0.0,6953,Graph Node FK,Identifier of target entity node,OBS-0023906
+relationship_evidence_graph_edges.csv,relationship_type,object,0,0.0,9,Graph Relation Type,"Edge relationship predicate (e.g. IMPACTS_ROUTE, LOCATED_AT, DUPLICATE_OF)",POSSIBLE_SAME_INCIDENT
+relationship_evidence_graph_edges.csv,confidence_score,float64,0,0.0,741,Graph Edge Weight,Edge connection confidence score [0.0 - 1.0],0.397
+relationship_evidence_graph_edges.csv,rule_id,object,0,0.0,6,Rule Reference,Inference rule triggering edge creation,SPATIAL_01
+relationship_evidence_graph_edges.csv,evidence_ids,object,0,0.0,18000,Graph Evidence Link,Semicolon-delimited list of supporting observation IDs,OBS-0004850;OBS-0000445
+relationship_evidence_graph_edges.csv,verification_status,object,0,0.0,3,Graph Status,"Verification state (HYPOTHESIS, REVIEWED_SIMULATED, UNVERIFIED)",HYPOTHESIS
+relationship_evidence_graph_edges.csv,explanation,object,0,0.0,1,Graph Explanation,Natural language explanation of edge relationship,Synthetic example relationship; valid...
+relationship_evidence_graph_edges.csv,is_synthetic,bool,0,0.0,1,Provenance Metadata,Boolean synthetic flag,True
+route_impacts.csv,route_impact_id,object,0,0.0,5000,Primary Key,Unique route impact event identifier,RIMP-000001
+route_impacts.csv,route_id,object,0,0.0,40,Foreign Key,Referenced route ID matching routes.csv,ROUTE-037
+route_impacts.csv,incident_id,object,0,0.0,2945,Foreign Key,Referenced incident ID matching incident_clusters.csv,INC-002256
+route_impacts.csv,segment_id,object,0,0.0,2161,Segment Identifier,Synthetic road/route segment ID,SEG-01718
+route_impacts.csv,impact_type,object,0,0.0,5,Target / Impact Label,"Disruption category (ON_ROUTE, CLOSURE, POSSIBLE_DELAY, NEAR_ROUTE_CANDIDATE, NO_CONFIRMED_IMPACT)",ON_ROUTE
+route_impacts.csv,distance_from_route_m,float64,0,0.0,1880,Spatial Feature,Distance between incident centroid and route in meters,76.1
+route_impacts.csv,valid_from,object,0,0.0,2945,Temporal Window,Impact window start timestamp,2026-09-12T20:08:23
+route_impacts.csv,valid_to,object,0,0.0,2944,Temporal Window,Impact window end timestamp,2026-09-12T21:03:23
+route_impacts.csv,impact_confidence,float64,0,0.0,730,Model Feature / Score,Confidence of impact estimation [0.0 - 1.0],0.386
+route_impacts.csv,verification_status,object,0,0.0,3,Status Metadata,Impact verification state,UNVERIFIED
+route_impacts.csv,is_synthetic,bool,0,0.0,1,Provenance Metadata,Boolean synthetic flag,True
+routes.csv,route_id,object,0,0.0,40,Primary Key,Unique transit/commute route identifier,ROUTE-001
+routes.csv,origin_name,object,0,0.0,8,Spatial Feature,Commute origin point name in Western Suburbs,Kandivali
+routes.csv,origin_lat,float64,0,0.0,8,Spatial Coordinate,Origin latitude,19.205
+routes.csv,origin_lon,float64,0,0.0,7,Spatial Coordinate,Origin longitude,72.852
+routes.csv,destination_name,object,0,0.0,8,Spatial Feature,Commute destination point name in Western Suburbs,Versova
+routes.csv,destination_lat,float64,0,0.0,8,Spatial Coordinate,Destination latitude,19.131
+routes.csv,destination_lon,float64,0,0.0,7,Spatial Coordinate,Destination longitude,72.815
+routes.csv,travel_mode,object,0,0.0,1,Mode Feature,"Transport mode (DRIVE, TRANSIT, TWO_WHEELER)",driving
+routes.csv,routing_provider,object,0,0.0,1,Provider Metadata,Routing engine tag (e.g. OSRM_SIMULATED),OSRM_DEMO_OR_SIMULATED_GEOMETRY
+routes.csv,geometry_status,object,0,0.0,1,Status Metadata,Geometry generation status flag,SYNTHETIC_EXAMPLE
+routes.csv,is_synthetic,bool,0,0.0,1,Provenance Metadata,Boolean synthetic flag,True
+sensor_readings.csv,reading_id,object,0,0.0,15000,Primary Key,Unique telemetry sensor reading identifier,READ-0000001
+sensor_readings.csv,sensor_id,object,0,0.0,595,Foreign Key,Sensor asset ID matching infrastructure_assets.asset_id,AST-00648
+sensor_readings.csv,timestamp,object,0,0.0,14993,Temporal Feature,Telemetry measurement timestamp,2026-03-30T18:05:11
+sensor_readings.csv,latitude,float64,0,0.0,590,Spatial Coordinate,Sensor latitude coordinate,19.129016
+sensor_readings.csv,longitude,float64,0,0.0,589,Spatial Coordinate,Sensor longitude coordinate,72.854026
+sensor_readings.csv,rainfall_15min_mm,float64,0,0.0,1099,Telemetry Feature,Rainfall accumulated over past 15 minutes (mm),3.0
+sensor_readings.csv,rainfall_1hr_mm,float64,0,0.0,2098,Telemetry Feature,Rainfall accumulated over past 1 hour (mm),17.75
+sensor_readings.csv,water_level_cm,float64,0,0.0,6591,Telemetry Feature,Measured water level in storm drain/canal (cm),73.03
+sensor_readings.csv,water_level_change_cm,float64,0,0.0,2472,Telemetry Feature,Rate of water level change over previous interval (cm),-0.41
+sensor_readings.csv,flow_rate_lps,float64,0,0.0,8818,Telemetry Feature,Calculated stormwater flow rate (liters per second),83.71
+sensor_readings.csv,drainage_capacity_pct,float64,0,0.0,6185,Telemetry Feature,Percentage of design capacity currently utilized,51.5
+sensor_readings.csv,blockage_probability,float64,0,0.0,647,Anomaly Target / Feature,Estimated likelihood of physical drain blockage [0.0 - 1.0],0.075
+sensor_readings.csv,pump_status,object,0,0.0,4,Telemetry State,"Status of adjacent pump (RUNNING, OFFLINE, FAILED, NOT_APPLICABLE)",FAILED
+sensor_readings.csv,sensor_health,object,0,0.0,3,Health Metadata,"Sensor hardware operational health (HEALTHY, DEGRADED, OFFLINE)",HEALTHY
+sensor_readings.csv,data_quality,object,0,0.0,3,Quality Indicator,"Telemetry quality indicator (GOOD, SUSPECT, INVALID)",SUSPECT
+sensor_readings.csv,is_synthetic,bool,0,0.0,1,Provenance Metadata,Boolean synthetic flag,True
+sensor_readings.csv,provenance,object,0,0.0,1,Provenance Metadata,Provenance label: SYNTHETIC_GENERATED,SYNTHETIC_GENERATED
+social_media_posts.csv,post_id,object,0,0.0,6000,Primary Key,Unique synthetic social media post identifier,POST-000001
+social_media_posts.csv,platform,object,0,0.0,4,Source Feature,"Simulated social platform name (e.g. X, CivicFeed)",PublicForum
+social_media_posts.csv,platform_post_id,object,0,0.0,6000,Platform ID,Simulated platform-native post identifier,SIM-0000001
+social_media_posts.csv,post_time,object,0,0.0,5999,Temporal Feature,Post timestamp,2026-08-16T02:30:52
+social_media_posts.csv,collected_at,object,0,0.0,6000,System Metadata,Ingestion timestamp,2026-08-16T04:35:52
+social_media_posts.csv,text_original,object,0,0.0,1415,Raw NLP Feature,Simulated user post text narrative,Anyone know what's happening? railway...
+social_media_posts.csv,language,object,0,0.0,5,NLP Metadata,"Language code (e.g. en, mr, hi-en)",hi-Latn
+social_media_posts.csv,latitude,float64,2669,44.48,3273,Spatial Coordinate,Reported post geotag latitude (frequently missing),19.227769
+social_media_posts.csv,longitude,float64,2669,44.48,3124,Spatial Coordinate,Reported post geotag longitude (frequently missing),72.854814
+social_media_posts.csv,location_text,object,1510,25.17,8,NLP Spatial Feature,Mentioned landmark or suburban area in post text,Borivali
+social_media_posts.csv,permalink,float64,6000,100.0,0,Metadata (Null),Simulated permalink URL (entirely null for synthetic integrity),NULL
+social_media_posts.csv,collection_method,object,0,0.0,1,Pipeline Metadata,Collection mechanism (e.g. STREAM_SIMULATION),SYNTHETIC_FIXTURE
+social_media_posts.csv,collection_status,object,0,0.0,1,Pipeline Metadata,Status of collection,SIMULATED
+social_media_posts.csv,is_synthetic,bool,0,0.0,1,Provenance Metadata,Boolean synthetic flag,True
+social_media_posts.csv,provenance,object,0,0.0,1,Provenance Metadata,Provenance label: SYNTHETIC_GENERATED,SYNTHETIC_GENERATED
+social_post_analysis.csv,post_id,object,0,0.0,6000,Primary / Foreign Key,Referenced post ID matching social_media_posts.post_id,POST-000001
+social_post_analysis.csv,incident_relevance_score,float64,0,0.0,835,Model Feature / Pseudo-Label,Synthetic relevance score [0.0 - 1.0],0.802
+social_post_analysis.csv,predicted_event_type,object,0,0.0,18,Model Pseudo-Label,Model-predicted incident event category,RAIL_SIGNAL_FAILURE
+social_post_analysis.csv,extracted_location,object,900,15.0,8,Model Feature (NER),NER extracted geographic location text,Borivali
+social_post_analysis.csv,event_time_estimate,object,0,0.0,6000,Temporal Estimate,Estimated event occurrence time,2026-08-16T02:11:52
+social_post_analysis.csv,duplicate_score,float64,0,0.0,733,Model Feature,Duplicate post likelihood score,0.388
+social_post_analysis.csv,spam_or_repost_flag,bool,0,0.0,2,Quality Filter,Boolean flag for spam or repost,False
+social_post_analysis.csv,evidence_quality,object,0,0.0,3,Quality Rating,Heuristic evidence quality rating,LOW
+social_post_analysis.csv,model_version,object,0,0.0,1,Model Metadata,Identifier of simulated extraction model,synthetic-demo-v1
+social_post_analysis.csv,review_status,object,0,0.0,3,Workflow Status,Verification review state,UNREVIEWED
+social_post_analysis.csv,is_synthetic,bool,0,0.0,1,Provenance Metadata,Boolean synthetic flag,True

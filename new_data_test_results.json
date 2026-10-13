@@ -1,0 +1,137 @@
+{
+  "test_timestamp": "2026-10-13T03:58:27.514012",
+  "dataset": {
+    "total_pairs": 500,
+    "per_class": 100,
+    "generation_seed": 2026,
+    "is_completely_new_data": true
+  },
+  "overall_metrics": {
+    "accuracy": 0.914,
+    "macro_f1": 0.9113,
+    "weighted_f1": 0.9113,
+    "macro_precision": 0.9319,
+    "macro_recall": 0.914
+  },
+  "per_class": {
+    "CONTRADICTORY": {
+      "precision": 0.9709,
+      "recall": 1.0,
+      "f1_score": 0.9852,
+      "support": 100
+    },
+    "DUPLICATE": {
+      "precision": 0.9841,
+      "recall": 0.62,
+      "f1_score": 0.7607,
+      "support": 100
+    },
+    "RELATED_BUT_DISTINCT": {
+      "precision": 0.9901,
+      "recall": 1.0,
+      "f1_score": 0.995,
+      "support": 100
+    },
+    "SAME_INCIDENT": {
+      "precision": 0.7143,
+      "recall": 0.95,
+      "f1_score": 0.8155,
+      "support": 100
+    },
+    "UNRELATED": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 100
+    }
+  },
+  "confidence_analysis": {
+    "mean": 0.9207,
+    "median": 0.9811,
+    "min": 0.3753,
+    "max": 0.999,
+    "correct_mean": 0.9276,
+    "incorrect_mean": 0.847
+  },
+  "confusion_matrix": [
+    [
+      100,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      62,
+      0,
+      38,
+      0
+    ],
+    [
+      0,
+      0,
+      100,
+      0,
+      0
+    ],
+    [
+      3,
+      1,
+      1,
+      95,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      100
+    ]
+  ],
+  "edge_case_results": [
+    {
+      "scenario_id": "EDGE-001",
+      "name": "Very close spatially but contradictory claims",
+      "expected": "CONTRADICTORY",
+      "predicted": "CONTRADICTORY",
+      "confidence": 0.8865,
+      "passed": true
+    },
+    {
+      "scenario_id": "EDGE-002",
+      "name": "Identical text but geographically impossible",
+      "expected": "UNRELATED",
+      "predicted": "SAME_INCIDENT",
+      "confidence": 0.6767,
+      "passed": false
+    },
+    {
+      "scenario_id": "EDGE-003",
+      "name": "Rainfall -> Waterlogging causal chain (borderline)",
+      "expected": "RELATED_BUT_DISTINCT",
+      "predicted": "CONTRADICTORY",
+      "confidence": 0.8773,
+      "passed": false
+    },
+    {
+      "scenario_id": "EDGE-004",
+      "name": "Low-reliability near-duplicate",
+      "expected": "DUPLICATE",
+      "predicted": "DUPLICATE",
+      "confidence": 0.5814,
+      "passed": true
+    },
+    {
+      "scenario_id": "EDGE-005",
+      "name": "Same location but 10-hour time gap",
+      "expected": "UNRELATED",
+      "predicted": "SAME_INCIDENT",
+      "confidence": 0.4909,
+      "passed": false
+    }
+  ],
+  "edge_case_pass_rate": "2/5",
+  "model_verdict": "PASS - Model generalises to new data"
+}

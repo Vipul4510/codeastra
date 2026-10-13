@@ -1,0 +1,29 @@
+{
+  "total_events_processed": 51000,
+  "stream_counts": {
+    "observations": 25000,
+    "social_media_posts": 6000,
+    "sensor_readings": 15000,
+    "flood_incident_observations": 5000
+  },
+  "deduplication": {
+    "exact_duplicates_flagged": 2955,
+    "social_reposts_or_copies_flagged": 270,
+    "reposts_pct_in_social": 4.5
+  },
+  "data_quality_flags": {
+    "missing_timestamps_flagged": 0,
+    "missing_coordinates_flagged": 4170,
+    "missing_coordinates_pct": 8.18,
+    "missing_text_flagged": 0,
+    "usable_for_spatial_clustering": 46830,
+    "usable_for_text_matching": 51000
+  },
+  "quality_score_summary": {
+    "mean": 0.9479,
+    "median": 1.0,
+    "min": 0.45,
+    "max": 1.0
+  },
+  "runtime_seconds": 17.34
+}

@@ -1,0 +1,30 @@
+{
+  "execution_timestamp": "2026-10-13T02:04:45+05:30",
+  "total_events_in_corpus": 51000,
+  "evaluated_events_slice": 5000,
+  "candidate_pairs_generated": 3317,
+  "pairwise_labels": {
+    "RELATED_BUT_DISTINCT": 1984,
+    "SAME_INCIDENT": 1047,
+    "UNRELATED": 146,
+    "DUPLICATE": 140
+  },
+  "rules_triggered": {
+    "RULE_RELATED_DISTINCT_CORRIDOR_CASCADE": 1866,
+    "RULE_SAME_INCIDENT_CORROBORATION": 1047,
+    "RULE_UNRELATED_INDEPENDENT": 146,
+    "RULE_EXACT_DUPLICATE_OR_REPOST_CHAIN": 140,
+    "RULE_CO_LOCATED_INDEPENDENT_EVENTS": 118
+  },
+  "total_clusters_formed": 4054,
+  "multi_member_clusters": 743,
+  "singleton_clusters": 3311,
+  "clusters_with_contradictions": 0,
+  "severity_distribution": {
+    "LOW": 2497,
+    "MODERATE": 697,
+    "CRITICAL": 440,
+    "MAJOR": 420
+  },
+  "execution_time_seconds": 3.62
+}

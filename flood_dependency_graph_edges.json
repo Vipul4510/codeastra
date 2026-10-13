@@ -1,0 +1,73 @@
+[
+  {
+    "source": "AST-00027",
+    "target": "AST-00026",
+    "relationship_type": "POSSIBLE_DEPENDENCY",
+    "confidence": 0.855,
+    "evidence_ids": [
+      "AST-00027",
+      "AST-00026"
+    ],
+    "rule_or_model_version": "FloodDependencyEngine_v6",
+    "explanation": "Heavy localized precipitation (58.0mm/hr) propagated into +11.2cm water level rise within 25.0 min (DIRECT_EDGE:UPSTREAM_OF:VERIFIED).",
+    "severity_level": "CRITICAL",
+    "status": "POSSIBLE_DEPENDENCY",
+    "rule_id": "RULE_RAINFALL_TO_WATER_RISE",
+    "is_causation_proven": false,
+    "alternative_hypotheses": [
+      "Upstream catchment discharge",
+      "Drain culvert capacity bottleneck"
+    ]
+  },
+  {
+    "source": "AST-00026",
+    "target": "AST-00028",
+    "relationship_type": "POSSIBLE_DEPENDENCY",
+    "confidence": 0.828,
+    "evidence_ids": [
+      "AST-00026",
+      "AST-00028"
+    ],
+    "rule_or_model_version": "FloodDependencyEngine_v6",
+    "explanation": "Subsurface drain surcharge (58.5cm) backed up onto surface carriage-way, producing 52.0cm waterlogging (DIRECT_EDGE:SERVES_ROAD:VERIFIED).",
+    "severity_level": "CRITICAL",
+    "status": "POSSIBLE_DEPENDENCY",
+    "rule_id": "RULE_WATER_LEVEL_TO_ROAD_WATERLOGGING",
+    "is_causation_proven": false,
+    "alternative_hypotheses": []
+  },
+  {
+    "source": "AST-00028",
+    "target": "ROUTE-ANDHERI-SUBWAY",
+    "relationship_type": "IMPACTS_ROUTE",
+    "confidence": 0.883,
+    "evidence_ids": [
+      "AST-00028",
+      "ROUTE-ANDHERI-SUBWAY"
+    ],
+    "rule_or_model_version": "FloodDependencyEngine_v6",
+    "explanation": "Carriageway inundation (CLOSED) caused severe traffic friction: speed dropped 85.0% (+45.0 min bottleneck delay).",
+    "severity_level": "CRITICAL",
+    "status": "POSSIBLE_DEPENDENCY",
+    "rule_id": "RULE_ROAD_WATERLOGGING_TO_TRAFFIC_SLOWDOWN",
+    "is_causation_proven": false,
+    "alternative_hypotheses": []
+  },
+  {
+    "source": "AST-00004",
+    "target": "AST-00006",
+    "relationship_type": "POSSIBLE_DEPENDENCY",
+    "confidence": 0.92,
+    "evidence_ids": [
+      "AST-00004",
+      "AST-00006"
+    ],
+    "rule_or_model_version": "FloodDependencyEngine_v6",
+    "explanation": "Power feeder AST-00004 outage preceded pump station AST-00006 stoppage by 10.0 min on verified power circuit (VERIFIED).",
+    "severity_level": "HIGH",
+    "status": "CONFIRMED_DEPENDENCY",
+    "rule_id": "RULE_POWER_FAILURE_TO_PUMP_FAILURE",
+    "is_causation_proven": false,
+    "alternative_hypotheses": []
+  }
+]

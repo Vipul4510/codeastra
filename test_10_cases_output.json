@@ -1,0 +1,750 @@
+[
+  {
+    "case_id": "TC-01",
+    "title": "Critical Underpass Submergence with Power Failure (Milan Subway, Santacruz)",
+    "status_code": 200,
+    "location": {
+      "locality": "Santacruz West",
+      "coordinates": {
+        "latitude": 19.0825,
+        "longitude": 72.8412
+      },
+      "nearby_critical_assets": [
+        {
+          "distance_km": 2.66,
+          "asset_id": "AST-00368",
+          "asset_type": "PUMP_STATION",
+          "asset_name": "Andheri_pump_station_0368",
+          "locality": "Andheri",
+          "latitude": 19.106317,
+          "longitude": 72.843604,
+          "catchment_id": "CAT-007",
+          "design_capacity_lps": 786.6,
+          "elevation_m": 38.45,
+          "asset_status": "UNKNOWN",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 3.189,
+          "asset_id": "AST-00182",
+          "asset_type": "TRAFFIC_SENSOR",
+          "asset_name": "Andheri_traffic_sensor_0182",
+          "locality": "Andheri",
+          "latitude": 19.111158,
+          "longitude": 72.842478,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 43.76,
+          "asset_status": "UNKNOWN",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 3.193,
+          "asset_id": "AST-00342",
+          "asset_type": "WATER_LEVEL_SENSOR",
+          "asset_name": "Andheri_water_level_sensor_0342",
+          "locality": "Andheri",
+          "latitude": 19.110313,
+          "longitude": 72.84876,
+          "catchment_id": "CAT-073",
+          "design_capacity_lps": null,
+          "elevation_m": 30.28,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        }
+      ]
+    },
+    "alert_level": "RED_CRITICAL",
+    "urgency": "IMMEDIATE",
+    "model_relationship": "NEW_PRIMARY_INCIDENT",
+    "model_confidence": 1.0,
+    "traffic_impact": {
+      "passability": "CLOSED",
+      "speed_drop_pct": 78.0,
+      "delay_minutes": 50.0,
+      "affected_route_id": "ROUTE-004"
+    },
+    "actions_count": 7,
+    "sample_actions": [
+      "Deploy mobile de-watering high-capacity pumps to coordinates (19.0825, 72.8412).",
+      "Issue traffic diversion and close underpasses/subways around Santacruz West.",
+      "Switch adjacent pumping stations in Santacruz West to secondary diesel generation (DG set)."
+    ]
+  },
+  {
+    "case_id": "TC-02",
+    "title": "Flash Corroborating Citizen Report at Same Location (Same Incident Clustering Test)",
+    "status_code": 200,
+    "location": {
+      "locality": "Santacruz West",
+      "coordinates": {
+        "latitude": 19.083,
+        "longitude": 72.8415
+      },
+      "nearby_critical_assets": [
+        {
+          "distance_km": 2.602,
+          "asset_id": "AST-00368",
+          "asset_type": "PUMP_STATION",
+          "asset_name": "Andheri_pump_station_0368",
+          "locality": "Andheri",
+          "latitude": 19.106317,
+          "longitude": 72.843604,
+          "catchment_id": "CAT-007",
+          "design_capacity_lps": 786.6,
+          "elevation_m": 38.45,
+          "asset_status": "UNKNOWN",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 3.131,
+          "asset_id": "AST-00342",
+          "asset_type": "WATER_LEVEL_SENSOR",
+          "asset_name": "Andheri_water_level_sensor_0342",
+          "locality": "Andheri",
+          "latitude": 19.110313,
+          "longitude": 72.84876,
+          "catchment_id": "CAT-073",
+          "design_capacity_lps": null,
+          "elevation_m": 30.28,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 3.133,
+          "asset_id": "AST-00182",
+          "asset_type": "TRAFFIC_SENSOR",
+          "asset_name": "Andheri_traffic_sensor_0182",
+          "locality": "Andheri",
+          "latitude": 19.111158,
+          "longitude": 72.842478,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 43.76,
+          "asset_status": "UNKNOWN",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        }
+      ]
+    },
+    "alert_level": "RED_CRITICAL",
+    "urgency": "IMMEDIATE",
+    "model_relationship": "CONTRADICTORY",
+    "model_confidence": 0.7129,
+    "traffic_impact": {
+      "passability": "CLOSED",
+      "speed_drop_pct": 82.0,
+      "delay_minutes": 55.0,
+      "affected_route_id": "ROUTE-004"
+    },
+    "actions_count": 6,
+    "sample_actions": [
+      "Deploy mobile de-watering high-capacity pumps to coordinates (19.0830, 72.8415).",
+      "Issue traffic diversion and close underpasses/subways around Santacruz West.",
+      "Broadcast digital message signs (VMS) on corridor: 55.0 min delay near Santacruz West."
+    ]
+  },
+  {
+    "case_id": "TC-03",
+    "title": "Moderate Highway Waterlogging on Western Express Highway (Andheri East)",
+    "status_code": 200,
+    "location": {
+      "locality": "Andheri East",
+      "coordinates": {
+        "latitude": 19.1198,
+        "longitude": 72.852
+      },
+      "nearby_critical_assets": [
+        {
+          "distance_km": 0.031,
+          "asset_id": "AST-00352",
+          "asset_type": "ROAD_SEGMENT",
+          "asset_name": "Andheri_road_segment_0352",
+          "locality": "Andheri",
+          "latitude": 19.120046,
+          "longitude": 72.852146,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 4.05,
+          "asset_status": "UNKNOWN",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.1,
+          "asset_id": "AST-00210",
+          "asset_type": "POWER_FEEDER",
+          "asset_name": "Andheri_power_feeder_0210",
+          "locality": "Andheri",
+          "latitude": 19.120426,
+          "longitude": 72.851314,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 13.92,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.105,
+          "asset_id": "AST-00888",
+          "asset_type": "POWER_FEEDER",
+          "asset_name": "Andheri_power_feeder_0888",
+          "locality": "Andheri",
+          "latitude": 19.120386,
+          "longitude": 72.851221,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 24.43,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        }
+      ]
+    },
+    "alert_level": "AMBER_WARNING",
+    "urgency": "HIGH",
+    "model_relationship": "UNRELATED",
+    "model_confidence": 0.9994,
+    "traffic_impact": {
+      "passability": "RESTRICTED",
+      "speed_drop_pct": 45.0,
+      "delay_minutes": 22.0,
+      "affected_route_id": "ROUTE-003"
+    },
+    "actions_count": 6,
+    "sample_actions": [
+      "Dispatch Municipal Ward field inspection team to Andheri East.",
+      "Clear stormwater outfall grates and inspect manhole sumps.",
+      "Broadcast digital message signs (VMS) on corridor: 22.0 min delay near Andheri East."
+    ]
+  },
+  {
+    "case_id": "TC-04",
+    "title": "Dry Weather Traffic Jam (Unrelated to Water / Runoff - Andheri West)",
+    "status_code": 200,
+    "location": {
+      "locality": "Andheri West",
+      "coordinates": {
+        "latitude": 19.1364,
+        "longitude": 72.8285
+      },
+      "nearby_critical_assets": [
+        {
+          "distance_km": 0.503,
+          "asset_id": "AST-00550",
+          "asset_type": "RAIN_GAUGE",
+          "asset_name": "Versova_rain_gauge_0550",
+          "locality": "Versova",
+          "latitude": 19.132893,
+          "longitude": 72.82548,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 5.86,
+          "asset_status": "UNKNOWN",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.582,
+          "asset_id": "AST-00937",
+          "asset_type": "TRAFFIC_SENSOR",
+          "asset_name": "Versova_traffic_sensor_0937",
+          "locality": "Versova",
+          "latitude": 19.131192,
+          "longitude": 72.827972,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 9.0,
+          "asset_status": "UNKNOWN",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.615,
+          "asset_id": "AST-01141",
+          "asset_type": "WATER_LEVEL_SENSOR",
+          "asset_name": "Versova_water_level_sensor_1141",
+          "locality": "Versova",
+          "latitude": 19.137491,
+          "longitude": 72.822758,
+          "catchment_id": "CAT-014",
+          "design_capacity_lps": null,
+          "elevation_m": 5.89,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        }
+      ]
+    },
+    "alert_level": "AMBER_WARNING",
+    "urgency": "HIGH",
+    "model_relationship": "UNRELATED",
+    "model_confidence": 0.9993,
+    "traffic_impact": {
+      "passability": "RESTRICTED",
+      "speed_drop_pct": 52.0,
+      "delay_minutes": 25.0,
+      "affected_route_id": "ROUTE-007"
+    },
+    "actions_count": 6,
+    "sample_actions": [
+      "Dispatch Municipal Ward field inspection team to Andheri West.",
+      "Clear stormwater outfall grates and inspect manhole sumps.",
+      "Broadcast digital message signs (VMS) on corridor: 25.0 min delay near Andheri West."
+    ]
+  },
+  {
+    "case_id": "TC-05",
+    "title": "Critical Coastal Pump Station Trip during High Tide (Versova)",
+    "status_code": 200,
+    "location": {
+      "locality": "Versova",
+      "coordinates": {
+        "latitude": 19.1412,
+        "longitude": 72.817
+      },
+      "nearby_critical_assets": [
+        {
+          "distance_km": 0.008,
+          "asset_id": "AST-00004",
+          "asset_type": "POWER_FEEDER",
+          "asset_name": "Versova_power_feeder_0004",
+          "locality": "Versova",
+          "latitude": 19.141207,
+          "longitude": 72.817078,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 40.95,
+          "asset_status": "UNKNOWN",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.136,
+          "asset_id": "AST-00412",
+          "asset_type": "ROAD_SEGMENT",
+          "asset_name": "Versova_road_segment_0412",
+          "locality": "Versova",
+          "latitude": 19.139985,
+          "longitude": 72.817121,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 31.33,
+          "asset_status": "ACTIVE",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.161,
+          "asset_id": "AST-00664",
+          "asset_type": "RAIN_GAUGE",
+          "asset_name": "Versova_rain_gauge_0664",
+          "locality": "Versova",
+          "latitude": 19.140745,
+          "longitude": 72.815541,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 36.8,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        }
+      ]
+    },
+    "alert_level": "RED_CRITICAL",
+    "urgency": "IMMEDIATE",
+    "model_relationship": "UNRELATED",
+    "model_confidence": 0.9984,
+    "traffic_impact": {
+      "passability": "PASSABLE",
+      "speed_drop_pct": 15.0,
+      "delay_minutes": 5.0,
+      "affected_route_id": "ROUTE-001"
+    },
+    "actions_count": 4,
+    "sample_actions": [
+      "Deploy mobile de-watering high-capacity pumps to coordinates (19.1412, 72.8170).",
+      "Issue traffic diversion and close underpasses/subways around Versova.",
+      "Switch adjacent pumping stations in Versova to secondary diesel generation (DG set)."
+    ]
+  },
+  {
+    "case_id": "TC-06",
+    "title": "Stormwater Culvert Blockage with Surcharge (Bandra West - S.V. Road)",
+    "status_code": 200,
+    "location": {
+      "locality": "Bandra West",
+      "coordinates": {
+        "latitude": 19.055,
+        "longitude": 72.836
+      },
+      "nearby_critical_assets": [
+        {
+          "distance_km": 5.762,
+          "asset_id": "AST-00368",
+          "asset_type": "PUMP_STATION",
+          "asset_name": "Andheri_pump_station_0368",
+          "locality": "Andheri",
+          "latitude": 19.106317,
+          "longitude": 72.843604,
+          "catchment_id": "CAT-007",
+          "design_capacity_lps": 786.6,
+          "elevation_m": 38.45,
+          "asset_status": "UNKNOWN",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 6.223,
+          "asset_id": "AST-00024",
+          "asset_type": "DRAIN",
+          "asset_name": "Andheri_drain_0024",
+          "locality": "Andheri",
+          "latitude": 19.110961,
+          "longitude": 72.836869,
+          "catchment_id": "CAT-061",
+          "design_capacity_lps": 345.83,
+          "elevation_m": 43.75,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 6.281,
+          "asset_id": "AST-00182",
+          "asset_type": "TRAFFIC_SENSOR",
+          "asset_name": "Andheri_traffic_sensor_0182",
+          "locality": "Andheri",
+          "latitude": 19.111158,
+          "longitude": 72.842478,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 43.76,
+          "asset_status": "UNKNOWN",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        }
+      ]
+    },
+    "alert_level": "AMBER_WARNING",
+    "urgency": "HIGH",
+    "model_relationship": "UNRELATED",
+    "model_confidence": 0.9998,
+    "traffic_impact": {
+      "passability": "RESTRICTED",
+      "speed_drop_pct": 60.0,
+      "delay_minutes": 32.0,
+      "affected_route_id": "ROUTE-008"
+    },
+    "actions_count": 6,
+    "sample_actions": [
+      "Dispatch Municipal Ward field inspection team to Bandra West.",
+      "Clear stormwater outfall grates and inspect manhole sumps.",
+      "Broadcast digital message signs (VMS) on corridor: 32.0 min delay near Bandra West."
+    ]
+  },
+  {
+    "case_id": "TC-07",
+    "title": "Clear Weather Normal Sensor Baseline Check (Borivali West)",
+    "status_code": 200,
+    "location": {
+      "locality": "Borivali West",
+      "coordinates": {
+        "latitude": 19.2294,
+        "longitude": 72.8485
+      },
+      "nearby_critical_assets": [
+        {
+          "distance_km": 0.006,
+          "asset_id": "AST-00002",
+          "asset_type": "WATER_LEVEL_SENSOR",
+          "asset_name": "Borivali_water_level_sensor_0002",
+          "locality": "Borivali",
+          "latitude": 19.229444,
+          "longitude": 72.848531,
+          "catchment_id": "CAT-036",
+          "design_capacity_lps": null,
+          "elevation_m": 41.92,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.14,
+          "asset_id": "AST-00713",
+          "asset_type": "ROAD_SEGMENT",
+          "asset_name": "Borivali_road_segment_0713",
+          "locality": "Borivali",
+          "latitude": 19.230103,
+          "longitude": 72.849608,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 5.96,
+          "asset_status": "ACTIVE",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.22,
+          "asset_id": "AST-00231",
+          "asset_type": "RAIL_STATION",
+          "asset_name": "Borivali_rail_station_0231",
+          "locality": "Borivali",
+          "latitude": 19.231095,
+          "longitude": 72.847428,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 37.08,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        }
+      ]
+    },
+    "alert_level": "GREEN_NORMAL",
+    "urgency": "LOW",
+    "model_relationship": "UNRELATED",
+    "model_confidence": 0.9998,
+    "traffic_impact": {
+      "passability": "PASSABLE",
+      "speed_drop_pct": 0.0,
+      "delay_minutes": 0.0,
+      "affected_route_id": "ROUTE-009"
+    },
+    "actions_count": 1,
+    "sample_actions": [
+      "Inspect priority asset AST-00002 (WATER_LEVEL_SENSOR) located 0.006km away."
+    ]
+  },
+  {
+    "case_id": "TC-08",
+    "title": "Sudden Cloudburst & Flash Water Accumulation (Malad Subway)",
+    "status_code": 200,
+    "location": {
+      "locality": "Malad West",
+      "coordinates": {
+        "latitude": 19.1872,
+        "longitude": 72.8481
+      },
+      "nearby_critical_assets": [
+        {
+          "distance_km": 0.062,
+          "asset_id": "AST-00283",
+          "asset_type": "WATER_LEVEL_SENSOR",
+          "asset_name": "Malad_water_level_sensor_0283",
+          "locality": "Malad",
+          "latitude": 19.187068,
+          "longitude": 72.847522,
+          "catchment_id": "CAT-036",
+          "design_capacity_lps": null,
+          "elevation_m": 6.95,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.086,
+          "asset_id": "AST-00881",
+          "asset_type": "RAIL_STATION",
+          "asset_name": "Malad_rail_station_0881",
+          "locality": "Malad",
+          "latitude": 19.186477,
+          "longitude": 72.848389,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 21.21,
+          "asset_status": "ACTIVE",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.115,
+          "asset_id": "AST-01011",
+          "asset_type": "SUBWAY_UNDERPASS",
+          "asset_name": "Malad_subway_underpass_1011",
+          "locality": "Malad",
+          "latitude": 19.187585,
+          "longitude": 72.847084,
+          "catchment_id": "CAT-066",
+          "design_capacity_lps": null,
+          "elevation_m": 9.86,
+          "asset_status": "UNKNOWN",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        }
+      ]
+    },
+    "alert_level": "RED_CRITICAL",
+    "urgency": "IMMEDIATE",
+    "model_relationship": "UNRELATED",
+    "model_confidence": 0.9994,
+    "traffic_impact": {
+      "passability": "CLOSED",
+      "speed_drop_pct": 75.0,
+      "delay_minutes": 40.0,
+      "affected_route_id": "ROUTE-007"
+    },
+    "actions_count": 6,
+    "sample_actions": [
+      "Deploy mobile de-watering high-capacity pumps to coordinates (19.1872, 72.8481).",
+      "Issue traffic diversion and close underpasses/subways around Malad West.",
+      "Broadcast digital message signs (VMS) on corridor: 40.0 min delay near Malad West."
+    ]
+  },
+  {
+    "case_id": "TC-09",
+    "title": "Social Media Incident Report with High Traffic Impact (Goregaon West)",
+    "status_code": 200,
+    "location": {
+      "locality": "Goregaon West",
+      "coordinates": {
+        "latitude": 19.1663,
+        "longitude": 72.8491
+      },
+      "nearby_critical_assets": [
+        {
+          "distance_km": 0.054,
+          "asset_id": "AST-00350",
+          "asset_type": "WATER_LEVEL_SENSOR",
+          "asset_name": "Goregaon_water_level_sensor_0350",
+          "locality": "Goregaon",
+          "latitude": 19.166788,
+          "longitude": 72.849124,
+          "catchment_id": "CAT-039",
+          "design_capacity_lps": null,
+          "elevation_m": 6.58,
+          "asset_status": "UNKNOWN",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.079,
+          "asset_id": "AST-00317",
+          "asset_type": "MANHOLE",
+          "asset_name": "Goregaon_manhole_0317",
+          "locality": "Goregaon",
+          "latitude": 19.166787,
+          "longitude": 72.849644,
+          "catchment_id": "CAT-055",
+          "design_capacity_lps": null,
+          "elevation_m": 27.5,
+          "asset_status": "UNKNOWN",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.093,
+          "asset_id": "AST-00620",
+          "asset_type": "SUBWAY_UNDERPASS",
+          "asset_name": "Goregaon_subway_underpass_0620",
+          "locality": "Goregaon",
+          "latitude": 19.16709,
+          "longitude": 72.848807,
+          "catchment_id": "CAT-005",
+          "design_capacity_lps": null,
+          "elevation_m": 14.29,
+          "asset_status": "UNKNOWN",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        }
+      ]
+    },
+    "alert_level": "AMBER_WARNING",
+    "urgency": "HIGH",
+    "model_relationship": "UNRELATED",
+    "model_confidence": 0.9996,
+    "traffic_impact": {
+      "passability": "RESTRICTED",
+      "speed_drop_pct": 68.0,
+      "delay_minutes": 38.0,
+      "affected_route_id": "ROUTE-002"
+    },
+    "actions_count": 6,
+    "sample_actions": [
+      "Dispatch Municipal Ward field inspection team to Goregaon West.",
+      "Clear stormwater outfall grates and inspect manhole sumps.",
+      "Broadcast digital message signs (VMS) on corridor: 38.0 min delay near Goregaon West."
+    ]
+  },
+  {
+    "case_id": "TC-10",
+    "title": "Upstream Surcharge Propagation (Dahisar Check Naka Corridor)",
+    "status_code": 200,
+    "location": {
+      "locality": "Dahisar East",
+      "coordinates": {
+        "latitude": 19.248,
+        "longitude": 72.8589
+      },
+      "nearby_critical_assets": [
+        {
+          "distance_km": 0.013,
+          "asset_id": "AST-00009",
+          "asset_type": "SUBWAY_UNDERPASS",
+          "asset_name": "Dahisar_subway_underpass_0009",
+          "locality": "Dahisar",
+          "latitude": 19.248086,
+          "longitude": 72.858977,
+          "catchment_id": "CAT-042",
+          "design_capacity_lps": null,
+          "elevation_m": 9.08,
+          "asset_status": "ACTIVE",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.066,
+          "asset_id": "AST-00332",
+          "asset_type": "RAIL_STATION",
+          "asset_name": "Dahisar_rail_station_0332",
+          "locality": "Dahisar",
+          "latitude": 19.248264,
+          "longitude": 72.858341,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 33.71,
+          "asset_status": "MAINTENANCE",
+          "data_source": "SIMULATED_SENSOR_MAP",
+          "is_synthetic": true
+        },
+        {
+          "distance_km": 0.096,
+          "asset_id": "AST-00049",
+          "asset_type": "ROAD_SEGMENT",
+          "asset_name": "Dahisar_road_segment_0049",
+          "locality": "Dahisar",
+          "latitude": 19.248813,
+          "longitude": 72.858595,
+          "catchment_id": null,
+          "design_capacity_lps": null,
+          "elevation_m": 9.54,
+          "asset_status": "ACTIVE",
+          "data_source": "SYNTHETIC_ASSET_REGISTER",
+          "is_synthetic": true
+        }
+      ]
+    },
+    "alert_level": "RED_CRITICAL",
+    "urgency": "IMMEDIATE",
+    "model_relationship": "UNRELATED",
+    "model_confidence": 0.9998,
+    "traffic_impact": {
+      "passability": "CLOSED",
+      "speed_drop_pct": 88.0,
+      "delay_minutes": 65.0,
+      "affected_route_id": "ROUTE-006"
+    },
+    "actions_count": 7,
+    "sample_actions": [
+      "Deploy mobile de-watering high-capacity pumps to coordinates (19.2480, 72.8589).",
+      "Issue traffic diversion and close underpasses/subways around Dahisar East.",
+      "Switch adjacent pumping stations in Dahisar East to secondary diesel generation (DG set)."
+    ]
+  }
+]

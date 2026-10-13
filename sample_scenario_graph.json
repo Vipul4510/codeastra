@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "created_at": "2026-10-13T02:28:53+05:30",
+    "version": "1.0.0",
+    "corridor": "Mumbai Western Suburbs (Bandra to Dahisar)"
+  },
+  "nodes": [
+    {
+      "node_id": "INC-ANDHERI-FLOOD-01",
+      "node_type": "INCIDENT",
+      "label": "Andheri Subway Severe Monsoon Inundation",
+      "locality": "Andheri West",
+      "latitude": 19.1197,
+      "longitude": 72.8464,
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "incident_category": "SUBWAY_INUNDATION",
+      "severity": "CRITICAL",
+      "status": "ACTIVE"
+    },
+    {
+      "node_id": "OBS-CITIZEN-01",
+      "node_type": "OBSERVATION",
+      "label": "Citizen Eyewitness Report (Andheri Station)",
+      "locality": "Andheri West",
+      "latitude": 19.1195,
+      "longitude": 72.846,
+      "timestamp": "2026-07-15T14:25:00+05:30",
+      "source_modality": "CITIZEN_REPORT",
+      "source_reliability": 0.75,
+      "text_raw": "Andheri subway waterlogged 55cm, cars stranded, traffic halted completely"
+    },
+    {
+      "node_id": "SNS-TELEMETRY-01",
+      "node_type": "SENSOR",
+      "label": "Andheri Water Level Ultrasonic Telemetry",
+      "locality": "Andheri West",
+      "latitude": 19.1197,
+      "longitude": 72.8464,
+      "timestamp": "2026-07-15T14:28:00+05:30",
+      "sensor_type": "ULTRASONIC_WATER_LEVEL",
+      "source_reliability": 0.96,
+      "measured_depth_cm": 58.5,
+      "status": "ALERT_CRITICAL"
+    },
+    {
+      "node_id": "POST-TWITTER-01",
+      "node_type": "SOCIAL_POST",
+      "label": "Tweet: Viral Flood Alert SV Road",
+      "locality": "Andheri West",
+      "latitude": 19.12,
+      "longitude": 72.847,
+      "timestamp": "2026-07-15T14:29:00+05:30",
+      "platform": "TWITTER",
+      "source_reliability": 0.65,
+      "text_raw": "Massive flooding at Andheri subway avoid SV road completely! #MumbaiRains"
+    },
+    {
+      "node_id": "POST-TWITTER-02",
+      "node_type": "SOCIAL_POST",
+      "label": "Retweet: @trafficbot repost",
+      "locality": "Andheri West",
+      "latitude": 19.12,
+      "longitude": 72.847,
+      "timestamp": "2026-07-15T14:45:00+05:30",
+      "platform": "TWITTER",
+      "source_reliability": 0.5,
+      "text_raw": "RT @citizen: Massive flooding at Andheri subway avoid SV road completely! #MumbaiRains",
+      "is_repost": true,
+      "repost_parent_id": "POST-TWITTER-01"
+    },
+    {
+      "node_id": "OBS-CONFLICT-01",
+      "node_type": "OBSERVATION",
+      "label": "Civic Notice: Subway Passable Claim",
+      "locality": "Andheri West",
+      "latitude": 19.1196,
+      "longitude": 72.8463,
+      "timestamp": "2026-07-15T14:32:00+05:30",
+      "source_modality": "CITIZEN_REPORT",
+      "source_reliability": 0.45,
+      "text_raw": "Andheri subway is completely clear and open for vehicles, normal traffic flow"
+    },
+    {
+      "node_id": "AST-00026",
+      "node_type": "INFRASTRUCTURE_ASSET",
+      "label": "Andheri Subway Underpass Arterial Culvert",
+      "locality": "Andheri West",
+      "latitude": 19.1197,
+      "longitude": 72.8464,
+      "timestamp": null,
+      "asset_type": "SUBWAY_UNDERPASS",
+      "elevation_m": 4.2,
+      "design_capacity_lps": 1200.0,
+      "asset_status": "SUBMERGED"
+    },
+    {
+      "node_id": "AST-00024",
+      "node_type": "INFRASTRUCTURE_ASSET",
+      "label": "Andheri Stormwater Drain Box Culvert",
+      "locality": "Andheri West",
+      "latitude": 19.118,
+      "longitude": 72.845,
+      "timestamp": null,
+      "asset_type": "DRAIN",
+      "design_capacity_lps": 3500.0,
+      "asset_status": "BLOCKED_OVERFLOW"
+    },
+    {
+      "node_id": "AST-00052",
+      "node_type": "INFRASTRUCTURE_ASSET",
+      "label": "Andheri Western Railway Suburban Station",
+      "locality": "Andheri West",
+      "latitude": 19.1198,
+      "longitude": 72.8468,
+      "timestamp": null,
+      "asset_type": "RAIL_STATION",
+      "elevation_m": 7.5,
+      "asset_status": "OPERATIONAL_DELAYED"
+    },
+    {
+      "node_id": "ROUTE-ANDHERI-SUBWAY",
+      "node_type": "ROUTE",
+      "label": "Andheri Subway East-West Link",
+      "locality": "Andheri",
+      "latitude": null,
+      "longitude": null,
+      "timestamp": null,
+      "origin": "Andheri West SV Road",
+      "destination": "Andheri East WEH",
+      "travel_mode": "ROAD_VEHICULAR",
+      "status": "CLOSED"
+    },
+    {
+      "node_id": "ROUTE-SV-ROAD",
+      "node_type": "ROUTE",
+      "label": "Swami Vivekananda (SV) Road Arterial",
+      "locality": "Andheri West",
+      "latitude": null,
+      "longitude": null,
+      "timestamp": null,
+      "origin": "Bandra Junction",
+      "destination": "Dahisar Checknaka",
+      "travel_mode": "ROAD_VEHICULAR",
+      "status": "SEVERE_CONGESTION"
+    },
+    {
+      "node_id": "TRANSIT-WESTERN-RAILWAY",
+      "node_type": "TRANSIT_SERVICE",
+      "label": "Western Railway Suburban Slow Line Corridor",
+      "locality": "Western Suburbs",
+      "latitude": null,
+      "longitude": null,
+      "timestamp": null,
+      "origin": "Churchgate",
+      "destination": "Dahanu Road",
+      "travel_mode": "COMMUTER_RAIL",
+      "status": "RUNNING_SLOW_15MIN_DELAY"
+    }
+  ],
+  "edges": [
+    {
+      "source": "INC-ANDHERI-FLOOD-01",
+      "target": "AST-00026",
+      "relationship_type": "AFFECTS_ASSET",
+      "confidence": 0.95,
+      "evidence_ids": [
+        "SNS-TELEMETRY-01",
+        "OBS-CITIZEN-01"
+      ],
+      "rule_or_model_version": "SpatialAssetMapper_v1",
+      "explanation": "Severe localized inundation (depth 58.5cm) submerges subway underpass barrel.",
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "is_identity_relation": false,
+      "is_physical_impact": true
+    },
+    {
+      "source": "INC-ANDHERI-FLOOD-01",
+      "target": "ROUTE-ANDHERI-SUBWAY",
+      "relationship_type": "IMPACTS_ROUTE",
+      "confidence": 0.96,
+      "evidence_ids": [
+        "INC-ANDHERI-FLOOD-01"
+      ],
+      "rule_or_model_version": "RouteImpactEngine_v1",
+      "explanation": "Underpass impassable; traffic police activated physical barriers.",
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "is_identity_relation": false,
+      "is_physical_impact": true,
+      "impact_type": "TOTAL_CLOSURE"
+    },
+    {
+      "source": "INC-ANDHERI-FLOOD-01",
+      "target": "ROUTE-SV-ROAD",
+      "relationship_type": "IMPACTS_ROUTE",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "INC-ANDHERI-FLOOD-01"
+      ],
+      "rule_or_model_version": "RouteImpactEngine_v1",
+      "explanation": "Traffic diversion from subway creates a 2.5km gridlock bottleneck on SV Road.",
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "is_identity_relation": false,
+      "is_physical_impact": true,
+      "impact_type": "SEVERE_CONGESTION"
+    },
+    {
+      "source": "INC-ANDHERI-FLOOD-01",
+      "target": "TRANSIT-WESTERN-RAILWAY",
+      "relationship_type": "IMPACTS_ROUTE",
+      "confidence": 0.74,
+      "evidence_ids": [
+        "INC-ANDHERI-FLOOD-01"
+      ],
+      "rule_or_model_version": "TransitCorridorLinker_v1",
+      "explanation": "Track culvert near subway approaches water safety threshold; slow speeds enforced.",
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "is_identity_relation": false,
+      "is_physical_impact": true,
+      "impact_type": "SPEED_RESTRICTION_DELAY"
+    },
+    {
+      "source": "OBS-CITIZEN-01",
+      "target": "INC-ANDHERI-FLOOD-01",
+      "relationship_type": "SUPPORTS",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "OBS-CITIZEN-01"
+      ],
+      "rule_or_model_version": "RuleEngine_v3.1",
+      "explanation": "Eyewitness citizen confirmation of 55cm water depth at subway entrance.",
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "is_identity_relation": false,
+      "is_physical_impact": false
+    },
+    {
+      "source": "OBS-CITIZEN-01",
+      "target": "OBS-CONFLICT-01",
+      "relationship_type": "CONTRADICTS",
+      "confidence": 0.85,
+      "evidence_ids": [
+        "OBS-CONFLICT-01",
+        "OBS-CITIZEN-01"
+      ],
+      "rule_or_model_version": "Rule_ContradictionMatrix",
+      "explanation": "Factual conflict: Normal passability claim directly contradicts 55cm submersion reports.",
+      "timestamp": "2026-07-15T14:35:00+05:30",
+      "is_identity_relation": true,
+      "is_physical_impact": false
+    },
+    {
+      "source": "SNS-TELEMETRY-01",
+      "target": "INC-ANDHERI-FLOOD-01",
+      "relationship_type": "SUPPORTS",
+      "confidence": 0.96,
+      "evidence_ids": [
+        "SNS-TELEMETRY-01"
+      ],
+      "rule_or_model_version": "RuleEngine_v3.1",
+      "explanation": "Hardware water level sensor confirms 58.5cm standing water in underpass.",
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "is_identity_relation": false,
+      "is_physical_impact": false
+    },
+    {
+      "source": "POST-TWITTER-01",
+      "target": "INC-ANDHERI-FLOOD-01",
+      "relationship_type": "SUPPORTS",
+      "confidence": 0.78,
+      "evidence_ids": [
+        "POST-TWITTER-01"
+      ],
+      "rule_or_model_version": "CalibratedLightGBM_v4",
+      "explanation": "Social crowd signal confirms traffic paralysis at subway approach.",
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "is_identity_relation": false,
+      "is_physical_impact": false
+    },
+    {
+      "source": "POST-TWITTER-02",
+      "target": "POST-TWITTER-01",
+      "relationship_type": "DUPLICATE_OF",
+      "confidence": 0.98,
+      "evidence_ids": [
+        "POST-TWITTER-02",
+        "POST-TWITTER-01"
+      ],
+      "rule_or_model_version": "Rule_DuplicateChain",
+      "explanation": "Near-instant viral social repost (Jaccard similarity 0.96). Treated as single evidence chain.",
+      "timestamp": "2026-07-15T14:45:00+05:30",
+      "is_identity_relation": true,
+      "is_physical_impact": false
+    },
+    {
+      "source": "OBS-CONFLICT-01",
+      "target": "OBS-CITIZEN-01",
+      "relationship_type": "CONTRADICTS",
+      "confidence": 0.85,
+      "evidence_ids": [
+        "OBS-CONFLICT-01",
+        "OBS-CITIZEN-01"
+      ],
+      "rule_or_model_version": "Rule_ContradictionMatrix",
+      "explanation": "Factual conflict: Normal passability claim directly contradicts 55cm submersion reports.",
+      "timestamp": "2026-07-15T14:35:00+05:30",
+      "is_identity_relation": true,
+      "is_physical_impact": false
+    },
+    {
+      "source": "AST-00026",
+      "target": "AST-00052",
+      "relationship_type": "POSSIBLE_DEPENDENCY",
+      "confidence": 0.79,
+      "evidence_ids": [
+        "AST-00026",
+        "AST-00052"
+      ],
+      "rule_or_model_version": "HydraulicAssetDependency_v1",
+      "explanation": "Subway culvert flooding backs up into railway station pedestrian subway access.",
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "is_identity_relation": false,
+      "is_physical_impact": true
+    },
+    {
+      "source": "AST-00026",
+      "target": "SNS-TELEMETRY-01",
+      "relationship_type": "OBSERVED_BY",
+      "confidence": 0.99,
+      "evidence_ids": [
+        "AST-00026"
+      ],
+      "rule_or_model_version": "AssetRegistry_v1",
+      "explanation": "Underpass is continuously monitored by ultrasonic water level gauge.",
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "is_identity_relation": false,
+      "is_physical_impact": false
+    },
+    {
+      "source": "AST-00024",
+      "target": "AST-00026",
+      "relationship_type": "POSSIBLE_DEPENDENCY",
+      "confidence": 0.82,
+      "evidence_ids": [
+        "AST-00024",
+        "AST-00026"
+      ],
+      "rule_or_model_version": "HydraulicAssetDependency_v1",
+      "explanation": "Upstream box drain blockage prevents gravity discharge from subway sump.",
+      "timestamp": "2026-07-15T14:30:00+05:30",
+      "is_identity_relation": false,
+      "is_physical_impact": true
+    }
+  ]
+}

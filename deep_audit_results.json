@@ -1,0 +1,367 @@
+{
+  "observations_source_id_breakdown": {
+    "CITIZEN_REPORT": {
+      "count": 3178,
+      "sample_source_ids": [
+        "SRC-CITIZEN_REPORT",
+        "SRC-CITIZEN_REPORT",
+        "SRC-CITIZEN_REPORT",
+        "SRC-CITIZEN_REPORT",
+        "SRC-CITIZEN_REPORT"
+      ],
+      "id_prefix": [
+        "SRC"
+      ]
+    },
+    "OFFICIAL_FEED": {
+      "count": 3159,
+      "sample_source_ids": [
+        "SRC-OFFICIAL_FEED",
+        "SRC-OFFICIAL_FEED",
+        "SRC-OFFICIAL_FEED",
+        "SRC-OFFICIAL_FEED",
+        "SRC-OFFICIAL_FEED"
+      ],
+      "id_prefix": [
+        "SRC"
+      ]
+    },
+    "SENSOR": {
+      "count": 3155,
+      "sample_source_ids": [
+        "SRC-SENSOR",
+        "SRC-SENSOR",
+        "SRC-SENSOR",
+        "SRC-SENSOR",
+        "SRC-SENSOR"
+      ],
+      "id_prefix": [
+        "SRC"
+      ]
+    },
+    "SIMULATED_TEST": {
+      "count": 3128,
+      "sample_source_ids": [
+        "SRC-SIMULATED_TEST",
+        "SRC-SIMULATED_TEST",
+        "SRC-SIMULATED_TEST",
+        "SRC-SIMULATED_TEST",
+        "SRC-SIMULATED_TEST"
+      ],
+      "id_prefix": [
+        "SRC"
+      ]
+    },
+    "SOCIAL_MEDIA": {
+      "count": 3047,
+      "sample_source_ids": [
+        "SRC-SOCIAL_MEDIA",
+        "SRC-SOCIAL_MEDIA",
+        "SRC-SOCIAL_MEDIA",
+        "SRC-SOCIAL_MEDIA",
+        "SRC-SOCIAL_MEDIA"
+      ],
+      "id_prefix": [
+        "SRC"
+      ]
+    },
+    "TRAFFIC_FEED": {
+      "count": 3068,
+      "sample_source_ids": [
+        "SRC-TRAFFIC_FEED",
+        "SRC-TRAFFIC_FEED",
+        "SRC-TRAFFIC_FEED",
+        "SRC-TRAFFIC_FEED",
+        "SRC-TRAFFIC_FEED"
+      ],
+      "id_prefix": [
+        "SRC"
+      ]
+    },
+    "TRANSIT_FEED": {
+      "count": 3191,
+      "sample_source_ids": [
+        "SRC-TRANSIT_FEED",
+        "SRC-TRANSIT_FEED",
+        "SRC-TRANSIT_FEED",
+        "SRC-TRANSIT_FEED",
+        "SRC-TRANSIT_FEED"
+      ],
+      "id_prefix": [
+        "SRC"
+      ]
+    },
+    "WEATHER_FEED": {
+      "count": 3074,
+      "sample_source_ids": [
+        "SRC-WEATHER_FEED",
+        "SRC-WEATHER_FEED",
+        "SRC-WEATHER_FEED",
+        "SRC-WEATHER_FEED",
+        "SRC-WEATHER_FEED"
+      ],
+      "id_prefix": [
+        "SRC"
+      ]
+    }
+  },
+  "social_source_id_cross_ref": {
+    "social_obs_count": 3047,
+    "post_id_matches": 0,
+    "platform_post_id_matches": 0,
+    "sample_soc_obs_source_ids": [
+      "SRC-SOCIAL_MEDIA",
+      "SRC-SOCIAL_MEDIA",
+      "SRC-SOCIAL_MEDIA",
+      "SRC-SOCIAL_MEDIA",
+      "SRC-SOCIAL_MEDIA"
+    ],
+    "sample_social_posts_post_ids": [
+      "POST-000001",
+      "POST-000002",
+      "POST-000003",
+      "POST-000004",
+      "POST-000005"
+    ],
+    "sample_social_posts_platform_ids": [
+      "SIM-0000001",
+      "SIM-0000002",
+      "SIM-0000003",
+      "SIM-0000004",
+      "SIM-0000005"
+    ]
+  },
+  "sensor_source_id_cross_ref": {
+    "sensor_obs_count": 3155,
+    "reading_id_matches": 0,
+    "sensor_id_matches": 0,
+    "sample_sensor_obs_source_ids": [
+      "SRC-SENSOR",
+      "SRC-SENSOR",
+      "SRC-SENSOR",
+      "SRC-SENSOR",
+      "SRC-SENSOR"
+    ],
+    "sample_sensor_readings_reading_ids": [
+      "READ-0000001",
+      "READ-0000002",
+      "READ-0000003",
+      "READ-0000004",
+      "READ-0000005"
+    ],
+    "sample_sensor_readings_sensor_ids": [
+      "AST-00648",
+      "AST-00190",
+      "AST-01158",
+      "AST-00043",
+      "AST-01124"
+    ]
+  },
+  "asset_types": {
+    "TRAFFIC_SENSOR": 129,
+    "SUBWAY_UNDERPASS": 125,
+    "RAIN_GAUGE": 125,
+    "RAIL_STATION": 125,
+    "WATER_LEVEL_SENSOR": 124,
+    "ROAD_SEGMENT": 120,
+    "DRAIN": 120,
+    "MANHOLE": 119,
+    "POWER_FEEDER": 116,
+    "PUMP_STATION": 97
+  },
+  "sensor_to_asset_id_check": {
+    "unique_sensors_in_readings": 595,
+    "sensor_ids_found_in_assets": 595,
+    "sensor_ids_missing_in_assets": 0,
+    "asset_types_matching_sensor_ids": {
+      "TRAFFIC_SENSOR": 129,
+      "RAIN_GAUGE": 125,
+      "WATER_LEVEL_SENSOR": 124,
+      "DRAIN": 120,
+      "PUMP_STATION": 97
+    }
+  },
+  "graph_edges_source_entity_validation": {
+    "ASSET": {
+      "total_records": 4470,
+      "unique_ids": 1166,
+      "valid_ids_found": 1166,
+      "missing_ids_count": 0,
+      "sample_missing": []
+    },
+    "INCIDENT": {
+      "total_records": 4470,
+      "unique_ids": 2719,
+      "valid_ids_found": 2719,
+      "missing_ids_count": 0,
+      "sample_missing": []
+    },
+    "OBSERVATION": {
+      "total_records": 4520,
+      "unique_ids": 4127,
+      "valid_ids_found": 4127,
+      "missing_ids_count": 0,
+      "sample_missing": []
+    },
+    "SOCIAL_POST": {
+      "total_records": 4540,
+      "unique_ids": 3190,
+      "valid_ids_found": 3190,
+      "missing_ids_count": 0,
+      "sample_missing": []
+    }
+  },
+  "graph_edges_target_entity_validation": {
+    "ASSET": {
+      "total_records": 3634,
+      "unique_ids": 1137,
+      "valid_ids_found": 1137,
+      "missing_ids_count": 0,
+      "sample_missing": []
+    },
+    "INCIDENT": {
+      "total_records": 3566,
+      "unique_ids": 2421,
+      "valid_ids_found": 2421,
+      "missing_ids_count": 0,
+      "sample_missing": []
+    },
+    "LOCATION": {
+      "total_records": 3537,
+      "unique_ids": 8,
+      "valid_ids_found": 0,
+      "missing_ids_count": 8,
+      "sample_missing": [
+        "LOC-07",
+        "LOC-06",
+        "LOC-08",
+        "LOC-04",
+        "LOC-02"
+      ]
+    },
+    "OBSERVATION": {
+      "total_records": 3604,
+      "unique_ids": 3347,
+      "valid_ids_found": 3347,
+      "missing_ids_count": 0,
+      "sample_missing": []
+    },
+    "ROUTE": {
+      "total_records": 3659,
+      "unique_ids": 40,
+      "valid_ids_found": 40,
+      "missing_ids_count": 0,
+      "sample_missing": []
+    }
+  },
+  "graph_evidence_ids_validation": {
+    "total_evidence_references": 36000,
+    "missing_evidence_observations": 0
+  },
+  "route_impacts_segments": {
+    "unique_segment_ids": 2161,
+    "sample_segments": [
+      "SEG-01718",
+      "SEG-01303",
+      "SEG-01430",
+      "SEG-01682",
+      "SEG-01111"
+    ],
+    "is_segment_table_present": false
+  },
+  "flood_asset_ids_in_infrastructure": {
+    "unique_flood_asset_ids": 461,
+    "found_in_assets": 461,
+    "missing_in_assets": 0
+  },
+  "pairwise_stats_by_label": {
+    "CONTRADICTORY": {
+      "count": 996,
+      "pct": 8.3,
+      "mean_geo_dist_km": 0.3603,
+      "mean_time_diff_min": 25.3696,
+      "mean_text_similarity": 0.5452,
+      "pct_same_locality": 100.0,
+      "pct_same_source": 36.85,
+      "mean_reliability_prod": 0.5141
+    },
+    "DUPLICATE": {
+      "count": 1886,
+      "pct": 15.72,
+      "mean_geo_dist_km": 0.0911,
+      "mean_time_diff_min": 2.925,
+      "mean_text_similarity": 0.9003,
+      "pct_same_locality": 100.0,
+      "pct_same_source": 35.15,
+      "mean_reliability_prod": 0.4959
+    },
+    "RELATED_BUT_DISTINCT": {
+      "count": 2367,
+      "pct": 19.73,
+      "mean_geo_dist_km": 1.2336,
+      "mean_time_diff_min": 89.3246,
+      "mean_text_similarity": 0.5524,
+      "pct_same_locality": 50.02,
+      "pct_same_source": 34.94,
+      "mean_reliability_prod": 0.497
+    },
+    "SAME_INCIDENT": {
+      "count": 4075,
+      "pct": 33.96,
+      "mean_geo_dist_km": 0.3631,
+      "mean_time_diff_min": 19.9157,
+      "mean_text_similarity": 0.8192,
+      "pct_same_locality": 100.0,
+      "pct_same_source": 34.4,
+      "mean_reliability_prod": 0.4983
+    },
+    "UNRELATED": {
+      "count": 2676,
+      "pct": 22.3,
+      "mean_geo_dist_km": 4.0721,
+      "mean_time_diff_min": 370.1046,
+      "mean_text_similarity": 0.228,
+      "pct_same_locality": 32.59,
+      "pct_same_source": 35.58,
+      "mean_reliability_prod": 0.5049
+    }
+  },
+  "pairwise_pair_duplication": {
+    "total_pairs": 12000,
+    "unique_unordered_pairs": 12000,
+    "symmetric_duplicates": 0,
+    "self_pairs": 0
+  },
+  "observation_text_duplicates": {
+    "raw_text_duplicates": 23590,
+    "normalized_text_duplicates": 23590,
+    "flagged_duplicate_candidate": 2943,
+    "flagged_match_raw_text_dupes": 2921
+  },
+  "temporal_ranges": {
+    "observations_event_time": {
+      "min": "2025-12-31T23:54:18",
+      "max": "2026-10-12T23:04:04"
+    },
+    "incidents_first_seen": {
+      "min": "2026-01-01T00:05:18",
+      "max": "2026-10-12T21:51:52"
+    },
+    "sensor_timestamps": {
+      "min": "2026-01-01T00:30:02",
+      "max": "2026-10-12T23:47:05"
+    },
+    "social_post_times": {
+      "min": "2026-01-01T00:29:45",
+      "max": "2026-10-12T21:26:22"
+    },
+    "flood_observed_times": {
+      "min": "2026-01-01T00:57:21",
+      "max": "2026-10-12T23:35:28"
+    },
+    "route_impacts_valid_from": {
+      "min": "2026-01-01T05:53:22",
+      "max": "2026-10-12T21:51:52"
+    }
+  }
+}
